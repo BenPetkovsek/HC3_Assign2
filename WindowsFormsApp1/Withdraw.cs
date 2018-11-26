@@ -21,6 +21,7 @@ namespace WindowsFormsApp1
             {
                 _withdrawalAmount = value;
                 lblWithdrawalAmount.Text = "$" + _withdrawalAmount.ToString();
+                if (_withdrawalAmount > 0) btnWithdraw.Enabled = true;
             }
         }
 
@@ -37,6 +38,10 @@ namespace WindowsFormsApp1
         private void RefreshAll()
         {
             LoadAccounts();
+            ShowAllCommonAmountButtons();
+            HideCustomAmountButtons();
+            HideResultDialog();
+            ClearAmount();
         }
         private void LoadAccounts()
         {
@@ -50,14 +55,9 @@ namespace WindowsFormsApp1
 
         private void btnCustomAmount_Click(object sender, EventArgs e)
         {
-            btnWithdraw20.Hide();
-            btnWithdraw40.Hide();
-            btnWithdraw60.Hide();
-            btnWithdraw80.Hide();
-            btnWithdraw100.Hide();
-            btnCustomAmount.Hide();
-            grpNumberPad.Show();
-            txtAmount.Show();
+            HideAllCommonAmountButtons();
+            ShowCustomAmountButtons();
+            ClearAmount();
         }
 
         #region WithDrawal Amount Handlers
@@ -86,15 +86,7 @@ namespace WindowsFormsApp1
 
         private void WithDraw(float Amount) 
         {
-            if (selectedAccount.Balance > Amount)
-            {
-                WithdrawalAmount = Amount;
-            }
-            else
-            {
-                MessageBox.Show("Insufficient Funds", "You do not have enough funds to withdraw the chosen amount. Select a different Amount", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
+            WithdrawalAmount = Amount;
         }
         #endregion
 
@@ -179,16 +171,13 @@ namespace WindowsFormsApp1
         {
             if (grpNumberPad.Visible)
             {
-                btnWithdraw20.Show();
-                btnWithdraw40.Show();
-                btnWithdraw60.Show();
-                btnWithdraw80.Show();
-                btnWithdraw100.Show();
-                btnCustomAmount.Show();
-                grpNumberPad.Hide();
-                txtAmount.Hide();
+                ShowAllCommonAmountButtons();
+                HideCustomAmountButtons();
+
             } else
             {
+                Menu menu = new Menu();
+                menu.Show();
                 this.Close();
             }
         }
@@ -200,20 +189,87 @@ namespace WindowsFormsApp1
 
         private void btnWithdraw_Click(object sender, EventArgs e)
         {
-                if (MessageBox.Show("Confirm Withdrawal", "Are you sure you want to withdraw $" + WithdrawalAmount + " From " + selectedAccount.Name, MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-                    == DialogResult.Yes)
+            if (WithdrawalAmount > 0)
+            {
+                if (WithdrawalAmount <= selectedAccount.Balance)
                 {
                     selectedAccount.Balance -= WithdrawalAmount;
-                    RefreshAll();
-
-                    Menu menu = new Menu();
-                    menu.Show();
-                    this.Hide();
-            }
-                else
+                    ShowResultDialog(true);
+                    HideAllCommonAmountButtons();
+                    HideCustomAmountButtons();
+                } else
                 {
-                    //Do Nothing
+                    ShowResultDialog(false);
                 }
+                
+            }
         }
+        private void btnWithdrawAgain_Click(object sender, EventArgs e)
+        {
+            RefreshAll();
+        }
+
+        private void btnBackToMenu_Click(object sender, EventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
+            this.Close();
+        }
+
+        #region Show and Hide Controls
+        private void ShowAllCommonAmountButtons()
+        {
+            grpCommonAmounts.Visible = true;
+            btnWithdraw20.Show();
+            btnWithdraw40.Show();
+            btnWithdraw60.Show();
+            btnWithdraw80.Show();
+            btnWithdraw100.Show();
+            btnCustomAmount.Show();
+        }
+
+        private void HideAllCommonAmountButtons()
+        {
+            grpCommonAmounts.Visible = true;
+            btnWithdraw20.Hide();
+            btnWithdraw40.Hide();
+            btnWithdraw60.Hide();
+            btnWithdraw80.Hide();
+            btnWithdraw100.Hide();
+            btnCustomAmount.Hide();
+        }
+
+        private void ShowCustomAmountButtons()
+        {
+            grpNumberPad.Show();
+            txtAmount.Show();
+        }
+
+        private void HideCustomAmountButtons()
+        {
+            grpNumberPad.Hide();
+            txtAmount.Hide();
+        }
+
+        private void ClearAmount()
+        {
+            WithdrawalAmount = 0;
+            txtAmount.Clear();
+        }
+
+
+        private void ShowResultDialog(Boolean success)
+        {
+            lblWithdrawalResult.Text = (success) ? "Withdrawal Succesful!" : "Withdrawal Unsuccesful";
+            lblResult.Text = (success) ? "Withdrew $" + WithdrawalAmount + " from " + selectedAccount.Name : "Insufficient Funds";
+            pnlResultBox.Show();
+        }
+
+        private void HideResultDialog()
+        {
+            pnlResultBox.Hide();
+        }
+        #endregion
+
     }
 }

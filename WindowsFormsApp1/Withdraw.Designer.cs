@@ -55,8 +55,14 @@
             this.btnWithdraw = new System.Windows.Forms.Button();
             this.lblWithdrawalAmountText = new System.Windows.Forms.Label();
             this.lblWithdrawalAmount = new System.Windows.Forms.Label();
+            this.pnlResultBox = new System.Windows.Forms.Panel();
+            this.btnWithdrawAgain = new System.Windows.Forms.Button();
+            this.btnBackToMenu = new System.Windows.Forms.Button();
+            this.lblResult = new System.Windows.Forms.Label();
+            this.lblWithdrawalResult = new System.Windows.Forms.Label();
             this.grpCommonAmounts.SuspendLayout();
             this.grpNumberPad.SuspendLayout();
+            this.pnlResultBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnWithdraw20
@@ -127,6 +133,7 @@
             // 
             // grpCommonAmounts
             // 
+            this.grpCommonAmounts.Controls.Add(this.pnlResultBox);
             this.grpCommonAmounts.Controls.Add(this.txtAmount);
             this.grpCommonAmounts.Controls.Add(this.btnWithdraw100);
             this.grpCommonAmounts.Controls.Add(this.btnCustomAmount);
@@ -146,6 +153,7 @@
             this.txtAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAmount.Location = new System.Drawing.Point(48, 28);
             this.txtAmount.Name = "txtAmount";
+            this.txtAmount.ReadOnly = true;
             this.txtAmount.Size = new System.Drawing.Size(246, 31);
             this.txtAmount.TabIndex = 6;
             this.txtAmount.Visible = false;
@@ -366,6 +374,69 @@
             this.lblWithdrawalAmount.Size = new System.Drawing.Size(0, 25);
             this.lblWithdrawalAmount.TabIndex = 13;
             // 
+            // pnlResultBox
+            // 
+            this.pnlResultBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlResultBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlResultBox.Controls.Add(this.btnWithdrawAgain);
+            this.pnlResultBox.Controls.Add(this.btnBackToMenu);
+            this.pnlResultBox.Controls.Add(this.lblResult);
+            this.pnlResultBox.Controls.Add(this.lblWithdrawalResult);
+            this.pnlResultBox.Location = new System.Drawing.Point(26, 65);
+            this.pnlResultBox.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlResultBox.Name = "pnlResultBox";
+            this.pnlResultBox.Size = new System.Drawing.Size(292, 221);
+            this.pnlResultBox.TabIndex = 13;
+            this.pnlResultBox.Visible = false;
+            // 
+            // btnWithdrawAgain
+            // 
+            this.btnWithdrawAgain.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.18462F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWithdrawAgain.Location = new System.Drawing.Point(172, 126);
+            this.btnWithdrawAgain.Margin = new System.Windows.Forms.Padding(2);
+            this.btnWithdrawAgain.Name = "btnWithdrawAgain";
+            this.btnWithdrawAgain.Size = new System.Drawing.Size(88, 63);
+            this.btnWithdrawAgain.TabIndex = 3;
+            this.btnWithdrawAgain.Text = "Withdraw Again";
+            this.btnWithdrawAgain.UseVisualStyleBackColor = true;
+            this.btnWithdrawAgain.Click += new System.EventHandler(this.btnWithdrawAgain_Click);
+            // 
+            // btnBackToMenu
+            // 
+            this.btnBackToMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.18462F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackToMenu.Location = new System.Drawing.Point(31, 126);
+            this.btnBackToMenu.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBackToMenu.Name = "btnBackToMenu";
+            this.btnBackToMenu.Size = new System.Drawing.Size(88, 63);
+            this.btnBackToMenu.TabIndex = 2;
+            this.btnBackToMenu.Text = "Back to Menu";
+            this.btnBackToMenu.UseVisualStyleBackColor = true;
+            this.btnBackToMenu.Click += new System.EventHandler(this.btnBackToMenu_Click);
+            // 
+            // lblResult
+            // 
+            this.lblResult.AutoSize = true;
+            this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.18462F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult.Location = new System.Drawing.Point(27, 72);
+            this.lblResult.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(99, 20);
+            this.lblResult.TabIndex = 1;
+            this.lblResult.Text = "Result Text!";
+            this.lblResult.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblWithdrawalResult
+            // 
+            this.lblWithdrawalResult.AutoSize = true;
+            this.lblWithdrawalResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWithdrawalResult.Location = new System.Drawing.Point(9, 25);
+            this.lblWithdrawalResult.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblWithdrawalResult.Name = "lblWithdrawalResult";
+            this.lblWithdrawalResult.Size = new System.Drawing.Size(269, 29);
+            this.lblWithdrawalResult.TabIndex = 0;
+            this.lblWithdrawalResult.Text = "Withdrawal Complete!";
+            this.lblWithdrawalResult.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // Withdraw
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,6 +455,8 @@
             this.grpCommonAmounts.ResumeLayout(false);
             this.grpCommonAmounts.PerformLayout();
             this.grpNumberPad.ResumeLayout(false);
+            this.pnlResultBox.ResumeLayout(false);
+            this.pnlResultBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -418,5 +491,10 @@
         private System.Windows.Forms.Button btn1;
         private System.Windows.Forms.Label lblWithdrawalAmountText;
         private System.Windows.Forms.Label lblWithdrawalAmount;
+        private System.Windows.Forms.Panel pnlResultBox;
+        private System.Windows.Forms.Button btnWithdrawAgain;
+        private System.Windows.Forms.Button btnBackToMenu;
+        private System.Windows.Forms.Label lblResult;
+        private System.Windows.Forms.Label lblWithdrawalResult;
     }
 }
