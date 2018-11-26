@@ -36,13 +36,17 @@ namespace WindowsFormsApp1
             panel1.Hide();
 
             transferComboFrom.Items.Clear();
-            transferComboFrom.Items.Add("Chequing Account: $" + StankAccount.chequingBalance);
-            transferComboFrom.Items.Add("Savings Account: $" + StankAccount.savingsBalance);
+            foreach (BankAccount accnt in User.Accounts)
+            {
+                transferComboFrom.Items.Add(accnt);
+            }
             transferComboFrom.SelectedIndex = 0;
 
             transferComboTo.Items.Clear();
-            transferComboTo.Items.Add("Chequing Account: $" + StankAccount.chequingBalance);
-            transferComboTo.Items.Add("Savings Account: $" + StankAccount.savingsBalance);
+            foreach (BankAccount accnt in User.Accounts)
+            {
+                transferComboTo.Items.Add(accnt);
+            }
             transferComboTo.SelectedIndex = 1;
             textBox1.Text = "0.00";
         }
@@ -105,30 +109,17 @@ namespace WindowsFormsApp1
         //0 = chequing, 1 = saving
         private void confirmBtn_Click(object sender, EventArgs e)
         {
-            
+            BankAccount accountFrom = (BankAccount) transferComboFrom.SelectedItem;
+            BankAccount accountTo = (BankAccount) transferComboTo.SelectedItem;
 
-            if (transferComboFrom.SelectedIndex == 0 && transferComboTo.SelectedIndex == 1 && amountStr != "")
+
+            if (accountFrom != accountTo && accountFrom != null && accountTo != null && !string.IsNullOrEmpty(amountStr))
             {
                 float amt = float.Parse(amountStr);
-                if (amt < StankAccount.chequingBalance)
+                if (amt < accountFrom.Balance)
                 {
-                    StankAccount.chequingBalance -= amt;
-                    StankAccount.savingsBalance += amt;
-                    finishTransfer(true);
-                }
-                else
-                {
-                    //OVERDRAWN ERROR
-                    finishTransfer(false);
-                }
-            }
-            else if (transferComboFrom.SelectedIndex == 1 && transferComboTo.SelectedIndex == 0 && amountStr != "")
-            {
-                float amt = float.Parse(amountStr);
-                if (amt < StankAccount.savingsBalance)
-                {
-                    StankAccount.chequingBalance += amt;
-                    StankAccount.savingsBalance -= amt;
+                    accountFrom.Balance -= amt;
+                    accountTo.Balance += amt;
                     finishTransfer(true);
                 }
                 else
@@ -229,13 +220,17 @@ namespace WindowsFormsApp1
             amount = new List<string>();
             textBox1.Text = "";
             transferComboFrom.Items.Clear();
-            transferComboFrom.Items.Add("Chequing Account: $" + StankAccount.chequingBalance);
-            transferComboFrom.Items.Add("Savings Account: $" + StankAccount.savingsBalance);
+            foreach (BankAccount accnt in User.Accounts)
+            {
+                transferComboFrom.Items.Add(accnt);
+            }
             transferComboFrom.SelectedIndex = 0;
 
             transferComboTo.Items.Clear();
-            transferComboTo.Items.Add("Chequing Account: $" + StankAccount.chequingBalance);
-            transferComboTo.Items.Add("Savings Account: $" + StankAccount.savingsBalance);
+            foreach (BankAccount accnt in User.Accounts)
+            {
+                transferComboTo.Items.Add(accnt);
+            }
             transferComboTo.SelectedIndex = 1;
         }
 

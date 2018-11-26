@@ -19,16 +19,24 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Withdraw withdrawWindow = new Withdraw();
+            withdrawWindow.selectedAccount = (BankAccount)accountComboBox.SelectedItem;
+            withdrawWindow.ShowDialog();
+            this.Hide();
         }
+
 
         private void Menu_Load(object sender, EventArgs e)
         {
+            
             accountComboBox.Items.Clear();
-            accountComboBox.Items.Add("Chequing Account: $" + StankAccount.chequingBalance);
-            accountComboBox.Items.Add("Savings Account: $" + StankAccount.savingsBalance);
+            foreach (BankAccount accnt in User.Accounts)
+            {
+                accountComboBox.Items.Add(accnt);
+            }
             accountComboBox.SelectedIndex = 0;
         }
+
 
         private void button4_Click(object sender, EventArgs e)
         {

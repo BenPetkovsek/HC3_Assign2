@@ -19,6 +19,7 @@ namespace WindowsFormsApp1
 
         private void confirmBtn_Click(object sender, EventArgs e)
         {
+            User.LoadAccounts();
             Menu menu = new Menu();
             menu.Show();
             this.Hide();
