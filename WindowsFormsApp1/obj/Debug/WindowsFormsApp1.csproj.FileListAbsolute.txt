@@ -10,3 +10,4 @@ E:\Entertainment\Projects\HC3_Assign2\WindowsFormsApp1\obj\Debug\WindowsFormsApp
 E:\Entertainment\Projects\HC3_Assign2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.LoginWindow.resources
 E:\Entertainment\Projects\HC3_Assign2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PinWindow.resources
 E:\Entertainment\Projects\HC3_Assign2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Menu.resources
+E:\Entertainment\Projects\HC3_Assign2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Transfer.resources

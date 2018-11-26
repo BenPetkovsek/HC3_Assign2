@@ -81,6 +81,7 @@
             this.accountComboBox.Name = "accountComboBox";
             this.accountComboBox.Size = new System.Drawing.Size(351, 37);
             this.accountComboBox.TabIndex = 5;
+            this.accountComboBox.SelectedIndexChanged += new System.EventHandler(this.accountComboBox_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -122,6 +123,7 @@
             this.button4.TabIndex = 3;
             this.button4.Text = "Transfer";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Menu
             // 

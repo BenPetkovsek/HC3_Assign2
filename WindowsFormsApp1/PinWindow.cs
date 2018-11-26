@@ -100,5 +100,10 @@ namespace WindowsFormsApp1
             wind.Show();
             this.Hide();
         }
+
+        private void pinTxtBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

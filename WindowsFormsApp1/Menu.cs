@@ -30,5 +30,16 @@ namespace WindowsFormsApp1
             accountComboBox.SelectedIndex = 0;
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Transfer transfer = new Transfer();
+            transfer.Show();
+            this.Hide();
+        }
+
+        private void accountComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
