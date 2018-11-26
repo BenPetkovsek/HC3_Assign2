@@ -19,6 +19,7 @@ namespace WindowsFormsApp1
 
         private void confirmBtn_Click(object sender, EventArgs e)
         {
+            User.LoadAccounts();
             Menu menu = new Menu();
             menu.Show();
             this.Hide();
@@ -99,6 +100,11 @@ namespace WindowsFormsApp1
             LoginWindow wind = new LoginWindow();
             wind.Show();
             this.Hide();
+        }
+
+        private void pinTxtBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

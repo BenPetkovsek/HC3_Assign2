@@ -24,7 +24,13 @@ namespace WindowsFormsApp1
 
             removeAddScreen();
             toComboBox.SelectedIndex = 0;
-            //fromComboBox.SelectedIndex = 0;
+            fromComboBox.Items.Clear();
+
+            foreach (BankAccount acc in User.Accounts) {
+                fromComboBox.Items.Add(acc.ToString());
+            }
+
+            fromComboBox.SelectedIndex = 0;
             showAddBtn.Enabled = true;
             toComboBox.Enabled = true;
             keyboardPanel.Visible = false;
@@ -107,6 +113,11 @@ namespace WindowsFormsApp1
         }
 
         private void confirmBtn_Click(object sender, EventArgs e) {
+            float transferAmount = float.Parse(amountTxtBox.Text.Substring(1));
+            if (getAccount().Balance < transferAmount) {
+                showError("Error: Insufficent Funds", getAccount().Name + " does not have enough money to transfer");
+                return;
+            }
             confirmLabel.Text = "Are you sure you want to send: " + Contacts.contacts[toComboBox.SelectedIndex].ToString() + "\n" + amountTxtBox.Text + " from: " + fromComboBox.Text + "?";
             confirmPanel.Visible = true;
             amountNumberPad.Enabled = false;
@@ -132,7 +143,6 @@ namespace WindowsFormsApp1
             if (this.amount.Count ==0) {
                 amount = "000";
             }
-            Debug.WriteLine(amount);
             return "$" + amount.Substring(0, amount.Length -2) + "." + amount.Substring(amount.Length - 2, 2);
         }
             
@@ -140,8 +150,6 @@ namespace WindowsFormsApp1
         private void button12_Click_1(object sender, EventArgs e) {
             if (amount.Count != 0) {
                 amount.RemoveAt(amount.Count-1);
-                for (int i = 0; i < amount.Count - 1; i++)
-                    Debug.Write(amount[i]);
             }
 
             amountTxtBox.Text = formatAmount();
@@ -193,10 +201,18 @@ namespace WindowsFormsApp1
         }
 
         private void yesBtn_Click(object sender, EventArgs e) {
+
+            float transferAmount = float.Parse(amountTxtBox.Text.Substring(1));
+            getAccount().Balance =  getAccount().Balance - transferAmount;
             confirmPanel.Visible = false;
             amount = new List<String>();
             amountTxtBox.Text = formatAmount();
-            // send money (subtract from amount)
+            fromComboBox.Items.Clear();
+
+            foreach (BankAccount acc in User.Accounts) {
+                fromComboBox.Items.Add(acc.ToString());
+            }
+            fromComboBox.SelectedIndex = 0;
             showError("Success", "e-Transfer successfully sent!");
         }
 
@@ -401,6 +417,10 @@ namespace WindowsFormsApp1
 
         private void button49_Click_1(object sender, EventArgs e) {
             addChar("m");
+        }
+
+        private BankAccount getAccount() {
+            return User.Accounts[fromComboBox.SelectedIndex];
         }
     }
 }

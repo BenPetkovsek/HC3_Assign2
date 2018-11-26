@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class PinWindow
+    partial class Transfer
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Bank_Title = new System.Windows.Forms.Label();
+            this.TransferLabel = new System.Windows.Forms.Label();
+            this.transferComboFrom = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.transferComboTo = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.accNumberPad = new System.Windows.Forms.GroupBox();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -42,22 +48,92 @@
             this.button3 = new System.Windows.Forms.Button();
             this.confirmBtn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.pinTxtBox = new System.Windows.Forms.TextBox();
-            this.cancelBtn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.transferResultLabel = new System.Windows.Forms.Label();
+            this.transferResultText = new System.Windows.Forms.Label();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
             this.accNumberPad.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Bank_Title
+            // TransferLabel
             // 
-            this.Bank_Title.AutoSize = true;
-            this.Bank_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bank_Title.Location = new System.Drawing.Point(70, 21);
-            this.Bank_Title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Bank_Title.Name = "Bank_Title";
-            this.Bank_Title.Size = new System.Drawing.Size(584, 98);
-            this.Bank_Title.TabIndex = 1;
-            this.Bank_Title.Text = "Jurassic Bank";
+            this.TransferLabel.AutoSize = true;
+            this.TransferLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.06154F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferLabel.Location = new System.Drawing.Point(104, 9);
+            this.TransferLabel.Name = "TransferLabel";
+            this.TransferLabel.Size = new System.Drawing.Size(510, 36);
+            this.TransferLabel.TabIndex = 0;
+            this.TransferLabel.Text = "Transfer Money Between Accounts";
+            this.TransferLabel.Click += new System.EventHandler(this.TransferLabel_Click);
+            // 
+            // transferComboFrom
+            // 
+            this.transferComboFrom.DropDownHeight = 104;
+            this.transferComboFrom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.transferComboFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.84615F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.transferComboFrom.FormattingEnabled = true;
+            this.transferComboFrom.IntegralHeight = false;
+            this.transferComboFrom.Location = new System.Drawing.Point(149, 103);
+            this.transferComboFrom.Name = "transferComboFrom";
+            this.transferComboFrom.Size = new System.Drawing.Size(421, 37);
+            this.transferComboFrom.TabIndex = 1;
+            this.transferComboFrom.SelectedIndexChanged += new System.EventHandler(this.transferComboFrom_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.18462F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(144, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 26);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "From:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.18462F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(144, 164);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 26);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "To:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // transferComboTo
+            // 
+            this.transferComboTo.DropDownHeight = 104;
+            this.transferComboTo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.transferComboTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.84615F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.transferComboTo.FormattingEnabled = true;
+            this.transferComboTo.IntegralHeight = false;
+            this.transferComboTo.Location = new System.Drawing.Point(149, 202);
+            this.transferComboTo.Name = "transferComboTo";
+            this.transferComboTo.Size = new System.Drawing.Size(421, 37);
+            this.transferComboTo.TabIndex = 4;
+            this.transferComboTo.SelectedIndexChanged += new System.EventHandler(this.transferComboTo_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.06154F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(299, 256);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(133, 36);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Amount:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.84615F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(219, 295);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(288, 36);
+            this.textBox1.TabIndex = 6;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // accNumberPad
             // 
@@ -73,17 +149,16 @@
             this.accNumberPad.Controls.Add(this.button3);
             this.accNumberPad.Controls.Add(this.confirmBtn);
             this.accNumberPad.Controls.Add(this.button2);
-            this.accNumberPad.Location = new System.Drawing.Point(169, 274);
+            this.accNumberPad.Location = new System.Drawing.Point(194, 338);
             this.accNumberPad.Margin = new System.Windows.Forms.Padding(4);
             this.accNumberPad.Name = "accNumberPad";
             this.accNumberPad.Padding = new System.Windows.Forms.Padding(4);
-            this.accNumberPad.Size = new System.Drawing.Size(362, 369);
-            this.accNumberPad.TabIndex = 9;
+            this.accNumberPad.Size = new System.Drawing.Size(362, 350);
+            this.accNumberPad.TabIndex = 10;
             this.accNumberPad.TabStop = false;
             // 
             // button12
             // 
-            this.button12.Enabled = false;
             this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.Location = new System.Drawing.Point(44, 267);
             this.button12.Margin = new System.Windows.Forms.Padding(4);
@@ -204,7 +279,6 @@
             // 
             // confirmBtn
             // 
-            this.confirmBtn.Enabled = false;
             this.confirmBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmBtn.Location = new System.Drawing.Point(220, 268);
             this.confirmBtn.Margin = new System.Windows.Forms.Padding(4);
@@ -217,6 +291,7 @@
             // 
             // button2
             // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Default;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(44, 23);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
@@ -227,53 +302,96 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // pinTxtBox
+            // button1
             // 
-            this.pinTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pinTxtBox.Location = new System.Drawing.Point(213, 226);
-            this.pinTxtBox.Margin = new System.Windows.Forms.Padding(4);
-            this.pinTxtBox.Name = "pinTxtBox";
-            this.pinTxtBox.PasswordChar = '*';
-            this.pinTxtBox.Size = new System.Drawing.Size(256, 40);
-            this.pinTxtBox.TabIndex = 10;
-            this.pinTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.pinTxtBox.TextChanged += new System.EventHandler(this.pinTxtBox_TextChanged);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.18462F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(13, 606);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(102, 83);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Cancel";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // cancelBtn
+            // panel1
             // 
-            this.cancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.06154F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelBtn.Location = new System.Drawing.Point(12, 646);
-            this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(117, 43);
-            this.cancelBtn.TabIndex = 11;
-            this.cancelBtn.Text = "Cancel";
-            this.cancelBtn.UseVisualStyleBackColor = true;
-            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.button14);
+            this.panel1.Controls.Add(this.button13);
+            this.panel1.Controls.Add(this.transferResultText);
+            this.panel1.Controls.Add(this.transferResultLabel);
+            this.panel1.Location = new System.Drawing.Point(160, 230);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(389, 271);
+            this.panel1.TabIndex = 12;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // label1
+            // transferResultLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.84615F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(282, 183);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 29);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Enter PIN";
+            this.transferResultLabel.AutoSize = true;
+            this.transferResultLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.93846F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.transferResultLabel.Location = new System.Drawing.Point(18, 27);
+            this.transferResultLabel.Name = "transferResultLabel";
+            this.transferResultLabel.Size = new System.Drawing.Size(343, 40);
+            this.transferResultLabel.TabIndex = 0;
+            this.transferResultLabel.Text = "Transfer Complete!";
+            this.transferResultLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // PinWindow
+            // transferResultText
+            // 
+            this.transferResultText.AutoSize = true;
+            this.transferResultText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.18462F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.transferResultText.Location = new System.Drawing.Point(36, 88);
+            this.transferResultText.Name = "transferResultText";
+            this.transferResultText.Size = new System.Drawing.Size(127, 26);
+            this.transferResultText.TabIndex = 1;
+            this.transferResultText.Text = "Result Text!";
+            this.transferResultText.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // button13
+            // 
+            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.18462F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.Location = new System.Drawing.Point(41, 155);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(117, 78);
+            this.button13.TabIndex = 2;
+            this.button13.Text = "Back to Menu";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // button14
+            // 
+            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.18462F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14.Location = new System.Drawing.Point(230, 155);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(117, 78);
+            this.button14.TabIndex = 3;
+            this.button14.Text = "Transfer Again";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // Transfer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(732, 701);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.cancelBtn);
-            this.Controls.Add(this.pinTxtBox);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.accNumberPad);
-            this.Controls.Add(this.Bank_Title);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "PinWindow";
-            this.Text = "Form2";
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.transferComboTo);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.transferComboFrom);
+            this.Controls.Add(this.TransferLabel);
+            this.Name = "Transfer";
+            this.Text = "Transfer";
+            this.Load += new System.EventHandler(this.Transfer_Load);
             this.accNumberPad.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,7 +399,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Label Bank_Title;
+        private System.Windows.Forms.Label TransferLabel;
+        private System.Windows.Forms.ComboBox transferComboFrom;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox transferComboTo;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.GroupBox accNumberPad;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button11;
@@ -295,8 +419,11 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button confirmBtn;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox pinTxtBox;
-        private System.Windows.Forms.Button cancelBtn;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label transferResultLabel;
+        private System.Windows.Forms.Label transferResultText;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button13;
     }
 }

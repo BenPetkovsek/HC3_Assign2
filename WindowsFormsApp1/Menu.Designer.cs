@@ -41,9 +41,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.06154F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(120, 341);
+            this.button1.Location = new System.Drawing.Point(90, 277);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(221, 92);
+            this.button1.Size = new System.Drawing.Size(166, 75);
             this.button1.TabIndex = 0;
             this.button1.Text = "Withdraw";
             this.button1.UseVisualStyleBackColor = true;
@@ -52,9 +53,10 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.06154F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(120, 479);
+            this.button2.Location = new System.Drawing.Point(90, 389);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(221, 92);
+            this.button2.Size = new System.Drawing.Size(166, 75);
             this.button2.TabIndex = 1;
             this.button2.Text = "Deposit";
             this.button2.UseVisualStyleBackColor = true;
@@ -62,12 +64,14 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.06154F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(397, 479);
+            this.button5.Location = new System.Drawing.Point(298, 389);
+            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(221, 92);
+            this.button5.Size = new System.Drawing.Size(166, 75);
             this.button5.TabIndex = 4;
             this.button5.Text = "e-Transfer";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // accountComboBox
             // 
@@ -77,27 +81,31 @@
             this.accountComboBox.Items.AddRange(new object[] {
             "Chequing $8602.50",
             "Savings $5240.23"});
-            this.accountComboBox.Location = new System.Drawing.Point(120, 256);
+            this.accountComboBox.Location = new System.Drawing.Point(90, 208);
+            this.accountComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.accountComboBox.Name = "accountComboBox";
-            this.accountComboBox.Size = new System.Drawing.Size(351, 37);
+            this.accountComboBox.Size = new System.Drawing.Size(264, 30);
             this.accountComboBox.TabIndex = 5;
+            this.accountComboBox.SelectedIndexChanged += new System.EventHandler(this.accountComboBox_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.06154F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(114, 201);
+            this.label1.Location = new System.Drawing.Point(86, 163);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(256, 36);
+            this.label1.Size = new System.Drawing.Size(188, 26);
             this.label1.TabIndex = 6;
             this.label1.Text = "Account Balance: ";
             // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.06154F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(497, 256);
+            this.button3.Location = new System.Drawing.Point(373, 208);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(121, 41);
+            this.button3.Size = new System.Drawing.Size(91, 33);
             this.button3.TabIndex = 7;
             this.button3.Text = " Info → ";
             this.button3.UseVisualStyleBackColor = true;
@@ -106,28 +114,29 @@
             // 
             this.Bank_Title.AutoSize = true;
             this.Bank_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bank_Title.Location = new System.Drawing.Point(81, 24);
-            this.Bank_Title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Bank_Title.Location = new System.Drawing.Point(61, 20);
             this.Bank_Title.Name = "Bank_Title";
-            this.Bank_Title.Size = new System.Drawing.Size(584, 98);
+            this.Bank_Title.Size = new System.Drawing.Size(431, 73);
             this.Bank_Title.TabIndex = 8;
             this.Bank_Title.Text = "Jurassic Bank";
             // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.06154F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(397, 341);
+            this.button4.Location = new System.Drawing.Point(298, 277);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(221, 92);
+            this.button4.Size = new System.Drawing.Size(166, 75);
             this.button4.TabIndex = 3;
             this.button4.Text = "Transfer";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(732, 701);
+            this.ClientSize = new System.Drawing.Size(549, 570);
             this.Controls.Add(this.Bank_Title);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label1);
@@ -136,6 +145,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Menu";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Menu_Load);
