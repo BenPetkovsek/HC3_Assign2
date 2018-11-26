@@ -1,0 +1,12 @@
+E:\Entertainment\Projects\HC3_Assign2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+E:\Entertainment\Projects\HC3_Assign2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+E:\Entertainment\Projects\HC3_Assign2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+E:\Entertainment\Projects\HC3_Assign2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+E:\Entertainment\Projects\HC3_Assign2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+E:\Entertainment\Projects\HC3_Assign2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+E:\Entertainment\Projects\HC3_Assign2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+E:\Entertainment\Projects\HC3_Assign2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+E:\Entertainment\Projects\HC3_Assign2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+E:\Entertainment\Projects\HC3_Assign2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.LoginWindow.resources
+E:\Entertainment\Projects\HC3_Assign2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PinWindow.resources
+E:\Entertainment\Projects\HC3_Assign2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Menu.resources
