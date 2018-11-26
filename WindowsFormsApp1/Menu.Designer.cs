@@ -72,14 +72,14 @@
             // accountComboBox
             // 
             this.accountComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.accountComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.06154F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accountComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.84615F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accountComboBox.FormattingEnabled = true;
             this.accountComboBox.Items.AddRange(new object[] {
             "Chequing $8602.50",
             "Savings $5240.23"});
             this.accountComboBox.Location = new System.Drawing.Point(120, 256);
             this.accountComboBox.Name = "accountComboBox";
-            this.accountComboBox.Size = new System.Drawing.Size(351, 41);
+            this.accountComboBox.Size = new System.Drawing.Size(351, 37);
             this.accountComboBox.TabIndex = 5;
             // 
             // label1

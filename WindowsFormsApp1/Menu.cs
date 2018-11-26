@@ -24,7 +24,11 @@ namespace WindowsFormsApp1
 
         private void Menu_Load(object sender, EventArgs e)
         {
+            accountComboBox.Items.Clear();
+            accountComboBox.Items.Add("Chequing Account: $" + StankAccount.chequingBalance);
+            accountComboBox.Items.Add("Savings Account: $" + StankAccount.savingsBalance);
             accountComboBox.SelectedIndex = 0;
         }
+
     }
 }
