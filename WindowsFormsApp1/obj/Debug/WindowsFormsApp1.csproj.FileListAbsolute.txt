@@ -45,3 +45,4 @@ D:\HC3_Assign2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.CodeAnalysisLog.x
 D:\HC3_Assign2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.lastcodeanalysissucceeded
 =======
 >>>>>>> 3618b38d928c2c8f22d30484209227c4e99ceb4a
+D:\HC3_Assign2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ETransfer.resources
