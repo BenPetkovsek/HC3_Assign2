@@ -7,14 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace WindowsFormsApp1
 {
     public partial class Withdraw : Form
     {
         public BankAccount selectedAccount;
-        
-        float _withdrawalAmount;
+        string enteredAmount = "0";
+        float _withdrawalAmount = 0;
         public float WithdrawalAmount
         {
             get { return _withdrawalAmount; }
@@ -22,7 +23,7 @@ namespace WindowsFormsApp1
             {
                 _withdrawalAmount = value;
                 lblWithdrawalAmount.Text = "$" + _withdrawalAmount.ToString();
-                if (_withdrawalAmount > 0) btnWithdraw.Enabled = true;
+                if (_withdrawalAmount > 0) btnWithdraw.Enabled = true; else btnWithdraw.Enabled = false;
             }
         }
 
@@ -34,6 +35,7 @@ namespace WindowsFormsApp1
         private void Withdraw_Load(object sender, EventArgs e)
         {
             LoadAccounts();
+            btnWithdraw.Enabled = false;
 
         }
         private void RefreshAll()
@@ -145,20 +147,32 @@ namespace WindowsFormsApp1
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            if (txtAmount.Text.Length > 0) txtAmount.Text = txtAmount.Text.Remove(txtAmount.Text.Length - 1);
+            AddText(-1);
         }
 
         private void btnOK_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(txtAmount.Text)) WithDraw(float.Parse(txtAmount.Text));
+            enteredAmount = "0";
             txtAmount.Text = "";
         }
 
         private void AddText(int num)
         {
-            
-            txtAmount.Text += num.ToString();
-           
+            if (num >= 0)
+            {
+                enteredAmount = enteredAmount + num;
+            }
+            else if (num == -1) {
+
+                if (enteredAmount.Length > 0) { enteredAmount = enteredAmount.Substring(0, enteredAmount.Length - 1); }
+            }
+
+            enteredAmount = enteredAmount.TrimStart('0');
+            if (enteredAmount.Length == 0 ) { txtAmount.Text = "0.00"; }
+            if (enteredAmount.Length == 1) { txtAmount.Text = "0.0" + enteredAmount; }
+            if (enteredAmount.Length == 2) { txtAmount.Text = "0." + enteredAmount; }
+            if (enteredAmount.Length > 2) { txtAmount.Text = enteredAmount.Substring(0, enteredAmount.Length - 2) + "." + enteredAmount.Substring(enteredAmount.Length - 2, 2); }
         }
 
         private void txtAmount_TextChanged(object sender, EventArgs e)

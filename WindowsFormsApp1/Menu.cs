@@ -64,5 +64,13 @@ namespace WindowsFormsApp1
             this.Hide();
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Deposit deposit = new Deposit();
+            deposit.selectedAccount = (BankAccount)accountComboBox.SelectedItem;
+            deposit.Show();
+            this.Hide();
+        }
     }
 }
