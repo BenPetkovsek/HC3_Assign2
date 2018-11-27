@@ -25,10 +25,9 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.Bank_Title = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ETransfer));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.fromComboBox = new System.Windows.Forms.ComboBox();
             this.toComboBox = new System.Windows.Forms.ComboBox();
             this.showAddBtn = new System.Windows.Forms.Button();
@@ -105,28 +104,21 @@
             this.button13 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.TransferLabel = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.newContactBox.SuspendLayout();
             this.amountNumberPad.SuspendLayout();
             this.confirmPanel.SuspendLayout();
             this.errorPanel.SuspendLayout();
             this.keyboardPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Bank_Title
-            // 
-            this.Bank_Title.AutoSize = true;
-            this.Bank_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bank_Title.Location = new System.Drawing.Point(68, 9);
-            this.Bank_Title.Name = "Bank_Title";
-            this.Bank_Title.Size = new System.Drawing.Size(431, 73);
-            this.Bank_Title.TabIndex = 9;
-            this.Bank_Title.Text = "Jurassic Bank";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(66, 165);
+            this.label1.Location = new System.Drawing.Point(41, 114);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 25);
             this.label1.TabIndex = 10;
@@ -136,27 +128,17 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(66, 221);
+            this.label2.Location = new System.Drawing.Point(41, 170);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 25);
             this.label2.TabIndex = 11;
             this.label2.Text = "To: ";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(195, 98);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(174, 37);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "e-Transfer";
-            // 
             // fromComboBox
             // 
             this.fromComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fromComboBox.FormattingEnabled = true;
-            this.fromComboBox.Location = new System.Drawing.Point(164, 163);
+            this.fromComboBox.Location = new System.Drawing.Point(139, 112);
             this.fromComboBox.Name = "fromComboBox";
             this.fromComboBox.Size = new System.Drawing.Size(364, 32);
             this.fromComboBox.TabIndex = 13;
@@ -165,7 +147,7 @@
             // 
             this.toComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toComboBox.FormattingEnabled = true;
-            this.toComboBox.Location = new System.Drawing.Point(164, 219);
+            this.toComboBox.Location = new System.Drawing.Point(139, 168);
             this.toComboBox.Name = "toComboBox";
             this.toComboBox.Size = new System.Drawing.Size(303, 28);
             this.toComboBox.TabIndex = 14;
@@ -173,7 +155,7 @@
             // showAddBtn
             // 
             this.showAddBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showAddBtn.Location = new System.Drawing.Point(478, 219);
+            this.showAddBtn.Location = new System.Drawing.Point(453, 168);
             this.showAddBtn.Name = "showAddBtn";
             this.showAddBtn.Size = new System.Drawing.Size(50, 32);
             this.showAddBtn.TabIndex = 15;
@@ -185,7 +167,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(66, 268);
+            this.label4.Location = new System.Drawing.Point(41, 217);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 25);
             this.label4.TabIndex = 16;
@@ -235,7 +217,7 @@
             // amountTxtBox
             // 
             this.amountTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.amountTxtBox.Location = new System.Drawing.Point(164, 268);
+            this.amountTxtBox.Location = new System.Drawing.Point(139, 217);
             this.amountTxtBox.Name = "amountTxtBox";
             this.amountTxtBox.Size = new System.Drawing.Size(122, 31);
             this.amountTxtBox.TabIndex = 28;
@@ -243,14 +225,15 @@
             // 
             // cancelBtn
             // 
+            this.cancelBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
             this.cancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.06154F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelBtn.Location = new System.Drawing.Point(71, 102);
+            this.cancelBtn.Location = new System.Drawing.Point(7, 592);
             this.cancelBtn.Margin = new System.Windows.Forms.Padding(2);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(88, 35);
             this.cancelBtn.TabIndex = 29;
-            this.cancelBtn.Text = "Back";
-            this.cancelBtn.UseVisualStyleBackColor = true;
+            this.cancelBtn.Text = "Cancel";
+            this.cancelBtn.UseVisualStyleBackColor = false;
             this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // newContactBox
@@ -260,7 +243,7 @@
             this.newContactBox.Controls.Add(this.addContactbtn);
             this.newContactBox.Controls.Add(this.emailTxtBox);
             this.newContactBox.Controls.Add(this.label8);
-            this.newContactBox.Location = new System.Drawing.Point(71, 262);
+            this.newContactBox.Location = new System.Drawing.Point(46, 211);
             this.newContactBox.Name = "newContactBox";
             this.newContactBox.Size = new System.Drawing.Size(457, 120);
             this.newContactBox.TabIndex = 30;
@@ -279,7 +262,7 @@
             this.amountNumberPad.Controls.Add(this.button3);
             this.amountNumberPad.Controls.Add(this.confirmBtn);
             this.amountNumberPad.Controls.Add(this.button2);
-            this.amountNumberPad.Location = new System.Drawing.Point(165, 304);
+            this.amountNumberPad.Location = new System.Drawing.Point(140, 253);
             this.amountNumberPad.Name = "amountNumberPad";
             this.amountNumberPad.Size = new System.Drawing.Size(272, 300);
             this.amountNumberPad.TabIndex = 31;
@@ -287,6 +270,7 @@
             // 
             // deleteBtn
             // 
+            this.deleteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(138)))));
             this.deleteBtn.Enabled = false;
             this.deleteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteBtn.Location = new System.Drawing.Point(39, 217);
@@ -294,7 +278,7 @@
             this.deleteBtn.Size = new System.Drawing.Size(60, 60);
             this.deleteBtn.TabIndex = 17;
             this.deleteBtn.Text = "<";
-            this.deleteBtn.UseVisualStyleBackColor = true;
+            this.deleteBtn.UseVisualStyleBackColor = false;
             this.deleteBtn.Click += new System.EventHandler(this.button12_Click_1);
             // 
             // button11
@@ -398,6 +382,7 @@
             // 
             // confirmBtn
             // 
+            this.confirmBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(200)))), ((int)(((byte)(135)))));
             this.confirmBtn.Enabled = false;
             this.confirmBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmBtn.Location = new System.Drawing.Point(171, 218);
@@ -405,7 +390,7 @@
             this.confirmBtn.Size = new System.Drawing.Size(60, 59);
             this.confirmBtn.TabIndex = 7;
             this.confirmBtn.Text = "Send";
-            this.confirmBtn.UseVisualStyleBackColor = true;
+            this.confirmBtn.UseVisualStyleBackColor = false;
             this.confirmBtn.Click += new System.EventHandler(this.confirmBtn_Click);
             // 
             // button2
@@ -427,10 +412,11 @@
             this.confirmPanel.Controls.Add(this.yesBtn);
             this.confirmPanel.Controls.Add(this.confirmMessage);
             this.confirmPanel.Controls.Add(this.label9);
-            this.confirmPanel.Location = new System.Drawing.Point(29, 118);
+            this.confirmPanel.Location = new System.Drawing.Point(4, 68);
             this.confirmPanel.Name = "confirmPanel";
             this.confirmPanel.Size = new System.Drawing.Size(539, 268);
             this.confirmPanel.TabIndex = 32;
+            this.confirmPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.confirmPanel_Paint);
             // 
             // confirmLabel
             // 
@@ -444,24 +430,26 @@
             // 
             // noBtn
             // 
+            this.noBtn.BackColor = System.Drawing.SystemColors.Control;
             this.noBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.noBtn.Location = new System.Drawing.Point(418, 226);
             this.noBtn.Name = "noBtn";
             this.noBtn.Size = new System.Drawing.Size(109, 30);
             this.noBtn.TabIndex = 3;
             this.noBtn.Text = "No";
-            this.noBtn.UseVisualStyleBackColor = true;
+            this.noBtn.UseVisualStyleBackColor = false;
             this.noBtn.Click += new System.EventHandler(this.noBtn_Click);
             // 
             // yesBtn
             // 
+            this.yesBtn.BackColor = System.Drawing.SystemColors.Control;
             this.yesBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yesBtn.Location = new System.Drawing.Point(294, 226);
             this.yesBtn.Name = "yesBtn";
             this.yesBtn.Size = new System.Drawing.Size(115, 30);
             this.yesBtn.TabIndex = 2;
             this.yesBtn.Text = "Yes";
-            this.yesBtn.UseVisualStyleBackColor = true;
+            this.yesBtn.UseVisualStyleBackColor = false;
             this.yesBtn.Click += new System.EventHandler(this.yesBtn_Click);
             // 
             // confirmMessage
@@ -490,7 +478,7 @@
             this.errorPanel.Controls.Add(this.okErrorBtn);
             this.errorPanel.Controls.Add(this.label6);
             this.errorPanel.Controls.Add(this.errorTitle);
-            this.errorPanel.Location = new System.Drawing.Point(29, 119);
+            this.errorPanel.Location = new System.Drawing.Point(4, 68);
             this.errorPanel.Name = "errorPanel";
             this.errorPanel.Size = new System.Drawing.Size(539, 268);
             this.errorPanel.TabIndex = 33;
@@ -578,7 +566,7 @@
             this.keyboardPanel.Controls.Add(this.button13);
             this.keyboardPanel.Controls.Add(this.button12);
             this.keyboardPanel.Controls.Add(this.button1);
-            this.keyboardPanel.Location = new System.Drawing.Point(29, 389);
+            this.keyboardPanel.Location = new System.Drawing.Point(4, 337);
             this.keyboardPanel.Name = "keyboardPanel";
             this.keyboardPanel.Size = new System.Drawing.Size(539, 246);
             this.keyboardPanel.TabIndex = 5;
@@ -1023,9 +1011,34 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // TransferLabel
+            // 
+            this.TransferLabel.AutoSize = true;
+            this.TransferLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.06154F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferLabel.Location = new System.Drawing.Point(221, 27);
+            this.TransferLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TransferLabel.Name = "TransferLabel";
+            this.TransferLabel.Size = new System.Drawing.Size(120, 26);
+            this.TransferLabel.TabIndex = 34;
+            this.TransferLabel.Text = "e-Transfer";
+            this.TransferLabel.Click += new System.EventHandler(this.TransferLabel_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(4, -14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(95, 93);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // ETransfer
             // 
-            this.ClientSize = new System.Drawing.Size(595, 642);
+            this.ClientSize = new System.Drawing.Size(549, 631);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.TransferLabel);
             this.Controls.Add(this.confirmPanel);
             this.Controls.Add(this.errorPanel);
             this.Controls.Add(this.keyboardPanel);
@@ -1034,10 +1047,8 @@
             this.Controls.Add(this.showAddBtn);
             this.Controls.Add(this.toComboBox);
             this.Controls.Add(this.fromComboBox);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Bank_Title);
             this.Controls.Add(this.newContactBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.amountTxtBox);
@@ -1052,17 +1063,15 @@
             this.errorPanel.ResumeLayout(false);
             this.errorPanel.PerformLayout();
             this.keyboardPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label Bank_Title;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox fromComboBox;
         private System.Windows.Forms.ComboBox toComboBox;
         private System.Windows.Forms.Button showAddBtn;
@@ -1139,5 +1148,7 @@
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button button21;
         private System.Windows.Forms.Button deleteCharbtn;
+        private System.Windows.Forms.Label TransferLabel;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

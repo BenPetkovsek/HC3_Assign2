@@ -37,6 +37,7 @@ namespace WindowsFormsApp1
 
             amountNumberPad.Visible = true;
             confirmPanel.Visible = false;
+            confirmBtn.BackColor = Color.Gray;
             errorPanel.Visible = false;
             amount = new List<String>();
 
@@ -126,6 +127,7 @@ namespace WindowsFormsApp1
             amount.Add(num.ToString());
             amountTxtBox.Text = formatAmount();
             confirmBtn.Enabled = true;
+            confirmBtn.BackColor = Color.FromArgb(132, 200, 135);
             deleteBtn.Enabled = true;
         }
 
@@ -153,9 +155,13 @@ namespace WindowsFormsApp1
             }
 
             amountTxtBox.Text = formatAmount();
-            confirmBtn.Enabled = false;
             if (amount.Count ==0)
+            {
                 deleteBtn.Enabled = false;
+                confirmBtn.Enabled = false;
+                confirmBtn.BackColor = Color.Gray;
+
+            }
             amountTxtBox.Text = formatAmount();
         }
 
@@ -421,6 +427,21 @@ namespace WindowsFormsApp1
 
         private BankAccount getAccount() {
             return User.Accounts[fromComboBox.SelectedIndex];
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void confirmPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void TransferLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

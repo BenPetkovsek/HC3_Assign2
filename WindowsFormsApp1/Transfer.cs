@@ -49,6 +49,8 @@ namespace WindowsFormsApp1
             }
             transferComboTo.SelectedIndex = 1;
             textBox1.Text = "0.00";
+            confirmBtn.Enabled = false;
+            confirmBtn.BackColor = Color.Gray;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -174,21 +176,31 @@ namespace WindowsFormsApp1
                     if (i == amount.Count - 2) { amountStr += "."; }
                     amountStr += amount[i];
                 }
+                confirmBtn.Enabled = true;
+                confirmBtn.BackColor = Color.FromArgb(132, 200, 135);
             }
             else if(amount.Count ==1)
             {
                 amountStr = "0.0" + amount[0];
+                confirmBtn.Enabled = true;
+                confirmBtn.BackColor = Color.FromArgb(132, 200, 135);
             }
             else if (amount.Count == 2)
             {
                 amountStr = "0." + amount[0] + amount[1];
+                confirmBtn.Enabled = true;
+                confirmBtn.BackColor = Color.FromArgb(132, 200, 135);
             }
             else if(amount.Count == 0)
             {
                 amountStr = "0.00";
+                confirmBtn.Enabled = false;
+                confirmBtn.BackColor = Color.Gray;
             }
 
             textBox1.Text = amountStr;
+
+
             
         }
 
@@ -232,6 +244,8 @@ namespace WindowsFormsApp1
                 transferComboTo.Items.Add(accnt);
             }
             transferComboTo.SelectedIndex = 1;
+            confirmBtn.Enabled = false;
+            confirmBtn.BackColor = Color.Gray;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
