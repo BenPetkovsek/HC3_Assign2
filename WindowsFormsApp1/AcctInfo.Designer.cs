@@ -32,28 +32,20 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.infoBtn = new System.Windows.Forms.Button();
             this.acctLabel = new System.Windows.Forms.Label();
             this.acctInfoCmbBox = new System.Windows.Forms.ComboBox();
             this.backBttn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.Acct = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // infoBtn
-            // 
-            this.infoBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.06154F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.infoBtn.Location = new System.Drawing.Point(619, 10);
-            this.infoBtn.Name = "infoBtn";
-            this.infoBtn.Size = new System.Drawing.Size(121, 41);
-            this.infoBtn.TabIndex = 10;
-            this.infoBtn.Text = " Info → ";
-            this.infoBtn.UseVisualStyleBackColor = true;
-            this.infoBtn.Click += new System.EventHandler(this.infoBtn_Click);
             // 
             // acctLabel
             // 
@@ -61,9 +53,9 @@
             this.acctLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.06154F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.acctLabel.Location = new System.Drawing.Point(6, 15);
             this.acctLabel.Name = "acctLabel";
-            this.acctLabel.Size = new System.Drawing.Size(233, 31);
+            this.acctLabel.Size = new System.Drawing.Size(247, 31);
             this.acctLabel.TabIndex = 9;
-            this.acctLabel.Text = "Account Balance: ";
+            this.acctLabel.Text = "Account Balances: ";
             // 
             // acctInfoCmbBox
             // 
@@ -77,6 +69,7 @@
             this.acctInfoCmbBox.Name = "acctInfoCmbBox";
             this.acctInfoCmbBox.Size = new System.Drawing.Size(334, 37);
             this.acctInfoCmbBox.TabIndex = 8;
+            this.acctInfoCmbBox.SelectedIndexChanged += new System.EventHandler(this.acctInfoCmbBox_SelectedIndexChanged);
             // 
             // backBttn
             // 
@@ -93,7 +86,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 69);
+            this.label1.Location = new System.Drawing.Point(6, 135);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(221, 32);
             this.label1.TabIndex = 12;
@@ -114,13 +107,69 @@
             this.Acct,
             this.Type,
             this.Amount});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 114);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 180);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(728, 508);
+            this.dataGridView1.Size = new System.Drawing.Size(728, 442);
             this.dataGridView1.TabIndex = 14;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(233, 140);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(141, 29);
+            this.checkBox1.TabIndex = 15;
+            this.checkBox1.Text = "Withdrawals";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Checked = true;
+            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox2.Location = new System.Drawing.Point(380, 140);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(110, 29);
+            this.checkBox2.TabIndex = 16;
+            this.checkBox2.Text = "Deposits";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Checked = true;
+            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox3.Location = new System.Drawing.Point(490, 140);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(127, 29);
+            this.checkBox3.TabIndex = 17;
+            this.checkBox3.Text = "Purchases";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Checked = true;
+            this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox4.Location = new System.Drawing.Point(623, 140);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(117, 29);
+            this.checkBox4.TabIndex = 18;
+            this.checkBox4.Text = "Transfers";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
             // Acct
             // 
@@ -141,7 +190,7 @@
             this.Type.Name = "Type";
             this.Type.ReadOnly = true;
             this.Type.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Type.Width = 150;
+            this.Type.Width = 250;
             // 
             // Amount
             // 
@@ -152,17 +201,20 @@
             this.Amount.Name = "Amount";
             this.Amount.ReadOnly = true;
             this.Amount.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Amount.Width = 375;
+            this.Amount.Width = 250;
             // 
             // AcctInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(752, 701);
+            this.Controls.Add(this.checkBox4);
+            this.Controls.Add(this.checkBox3);
+            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.backBttn);
-            this.Controls.Add(this.infoBtn);
             this.Controls.Add(this.acctLabel);
             this.Controls.Add(this.acctInfoCmbBox);
             this.Name = "AcctInfo";
@@ -175,13 +227,15 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button infoBtn;
         private System.Windows.Forms.Label acctLabel;
         private System.Windows.Forms.ComboBox acctInfoCmbBox;
         private System.Windows.Forms.Button backBttn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Acct;
         private System.Windows.Forms.DataGridViewTextBoxColumn Type;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;

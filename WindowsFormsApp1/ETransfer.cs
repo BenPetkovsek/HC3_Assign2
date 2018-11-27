@@ -11,6 +11,7 @@ namespace WindowsFormsApp1
 {
     public partial class ETransfer : Form
     {
+        public BankAccount selectedAccount;
         List<String> amount;
         public ETransfer() {
             InitializeComponent();
@@ -214,6 +215,8 @@ namespace WindowsFormsApp1
             }
             fromComboBox.SelectedIndex = 0;
             showError("Success", "e-Transfer successfully sent!");
+            XactLog x = new XactLog(getAccount().Name, "Transfer", "E-Transfer To: " + toComboBox.SelectedText, transferAmount);
+            User.record.Add(x);
         }
 
         private void noBtn_Click(object sender, EventArgs e) {

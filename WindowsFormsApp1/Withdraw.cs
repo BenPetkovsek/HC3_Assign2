@@ -195,7 +195,7 @@ namespace WindowsFormsApp1
                 if (WithdrawalAmount <= selectedAccount.Balance)
                 {
                     selectedAccount.Balance -= WithdrawalAmount;
-                    XactLog x = new XactLog(selectedAccount.Name, "Withdrawal", WithdrawalAmount);
+                    XactLog x = new XactLog(selectedAccount.Name, "Withdrawal", "Withdrawal", WithdrawalAmount);
                     User.record.Add(x);
                     ShowResultDialog(true);
                     HideAllCommonAmountButtons();

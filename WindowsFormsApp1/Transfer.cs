@@ -120,6 +120,8 @@ namespace WindowsFormsApp1
                 {
                     accountFrom.Balance -= amt;
                     accountTo.Balance += amt;
+                    XactLog x = new XactLog(accountFrom.Name, "Transfer", "Transfer To: " + accountTo.Name, amt);
+                    User.record.Add(x);
                     finishTransfer(true);
                 }
                 else
