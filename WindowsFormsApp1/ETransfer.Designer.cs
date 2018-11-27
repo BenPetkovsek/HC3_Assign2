@@ -116,7 +116,7 @@
             // 
             this.Bank_Title.AutoSize = true;
             this.Bank_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bank_Title.Location = new System.Drawing.Point(131, 9);
+            this.Bank_Title.Location = new System.Drawing.Point(68, 9);
             this.Bank_Title.Name = "Bank_Title";
             this.Bank_Title.Size = new System.Drawing.Size(431, 73);
             this.Bank_Title.TabIndex = 9;
@@ -126,7 +126,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(139, 182);
+            this.label1.Location = new System.Drawing.Point(66, 165);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 25);
             this.label1.TabIndex = 10;
@@ -136,7 +136,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(139, 238);
+            this.label2.Location = new System.Drawing.Point(66, 221);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 25);
             this.label2.TabIndex = 11;
@@ -146,7 +146,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(254, 98);
+            this.label3.Location = new System.Drawing.Point(195, 98);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(174, 37);
             this.label3.TabIndex = 12;
@@ -156,7 +156,7 @@
             // 
             this.fromComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fromComboBox.FormattingEnabled = true;
-            this.fromComboBox.Location = new System.Drawing.Point(237, 180);
+            this.fromComboBox.Location = new System.Drawing.Point(164, 163);
             this.fromComboBox.Name = "fromComboBox";
             this.fromComboBox.Size = new System.Drawing.Size(364, 32);
             this.fromComboBox.TabIndex = 13;
@@ -165,7 +165,7 @@
             // 
             this.toComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toComboBox.FormattingEnabled = true;
-            this.toComboBox.Location = new System.Drawing.Point(237, 236);
+            this.toComboBox.Location = new System.Drawing.Point(164, 219);
             this.toComboBox.Name = "toComboBox";
             this.toComboBox.Size = new System.Drawing.Size(303, 28);
             this.toComboBox.TabIndex = 14;
@@ -173,7 +173,7 @@
             // showAddBtn
             // 
             this.showAddBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showAddBtn.Location = new System.Drawing.Point(551, 236);
+            this.showAddBtn.Location = new System.Drawing.Point(478, 219);
             this.showAddBtn.Name = "showAddBtn";
             this.showAddBtn.Size = new System.Drawing.Size(50, 32);
             this.showAddBtn.TabIndex = 15;
@@ -185,7 +185,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(139, 288);
+            this.label4.Location = new System.Drawing.Point(66, 268);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 25);
             this.label4.TabIndex = 16;
@@ -235,7 +235,7 @@
             // amountTxtBox
             // 
             this.amountTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.amountTxtBox.Location = new System.Drawing.Point(237, 288);
+            this.amountTxtBox.Location = new System.Drawing.Point(164, 268);
             this.amountTxtBox.Name = "amountTxtBox";
             this.amountTxtBox.Size = new System.Drawing.Size(122, 31);
             this.amountTxtBox.TabIndex = 28;
@@ -244,7 +244,7 @@
             // cancelBtn
             // 
             this.cancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.06154F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelBtn.Location = new System.Drawing.Point(11, 665);
+            this.cancelBtn.Location = new System.Drawing.Point(71, 102);
             this.cancelBtn.Margin = new System.Windows.Forms.Padding(2);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(88, 35);
@@ -260,9 +260,9 @@
             this.newContactBox.Controls.Add(this.addContactbtn);
             this.newContactBox.Controls.Add(this.emailTxtBox);
             this.newContactBox.Controls.Add(this.label8);
-            this.newContactBox.Location = new System.Drawing.Point(144, 280);
+            this.newContactBox.Location = new System.Drawing.Point(71, 262);
             this.newContactBox.Name = "newContactBox";
-            this.newContactBox.Size = new System.Drawing.Size(463, 120);
+            this.newContactBox.Size = new System.Drawing.Size(457, 120);
             this.newContactBox.TabIndex = 30;
             // 
             // amountNumberPad
@@ -279,7 +279,7 @@
             this.amountNumberPad.Controls.Add(this.button3);
             this.amountNumberPad.Controls.Add(this.confirmBtn);
             this.amountNumberPad.Controls.Add(this.button2);
-            this.amountNumberPad.Location = new System.Drawing.Point(144, 339);
+            this.amountNumberPad.Location = new System.Drawing.Point(165, 304);
             this.amountNumberPad.Name = "amountNumberPad";
             this.amountNumberPad.Size = new System.Drawing.Size(272, 300);
             this.amountNumberPad.TabIndex = 31;
@@ -289,7 +289,7 @@
             // 
             this.deleteBtn.Enabled = false;
             this.deleteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteBtn.Location = new System.Drawing.Point(33, 217);
+            this.deleteBtn.Location = new System.Drawing.Point(39, 217);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(60, 60);
             this.deleteBtn.TabIndex = 17;
@@ -300,7 +300,7 @@
             // button11
             // 
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(99, 217);
+            this.button11.Location = new System.Drawing.Point(105, 217);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(60, 60);
             this.button11.TabIndex = 16;
@@ -311,7 +311,7 @@
             // button10
             // 
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(165, 151);
+            this.button10.Location = new System.Drawing.Point(171, 151);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(60, 60);
             this.button10.TabIndex = 15;
@@ -322,7 +322,7 @@
             // button9
             // 
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(99, 151);
+            this.button9.Location = new System.Drawing.Point(105, 151);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(60, 60);
             this.button9.TabIndex = 14;
@@ -333,7 +333,7 @@
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(33, 151);
+            this.button8.Location = new System.Drawing.Point(39, 151);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(60, 60);
             this.button8.TabIndex = 13;
@@ -344,7 +344,7 @@
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(165, 85);
+            this.button7.Location = new System.Drawing.Point(171, 85);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(60, 60);
             this.button7.TabIndex = 12;
@@ -355,7 +355,7 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(99, 85);
+            this.button6.Location = new System.Drawing.Point(105, 85);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(60, 60);
             this.button6.TabIndex = 11;
@@ -366,7 +366,7 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(33, 85);
+            this.button5.Location = new System.Drawing.Point(39, 85);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(60, 60);
             this.button5.TabIndex = 10;
@@ -377,7 +377,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(165, 19);
+            this.button4.Location = new System.Drawing.Point(171, 19);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(60, 60);
             this.button4.TabIndex = 9;
@@ -388,7 +388,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(99, 19);
+            this.button3.Location = new System.Drawing.Point(105, 19);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(60, 60);
             this.button3.TabIndex = 8;
@@ -400,7 +400,7 @@
             // 
             this.confirmBtn.Enabled = false;
             this.confirmBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.confirmBtn.Location = new System.Drawing.Point(165, 218);
+            this.confirmBtn.Location = new System.Drawing.Point(171, 218);
             this.confirmBtn.Name = "confirmBtn";
             this.confirmBtn.Size = new System.Drawing.Size(60, 59);
             this.confirmBtn.TabIndex = 7;
@@ -411,7 +411,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(33, 19);
+            this.button2.Location = new System.Drawing.Point(39, 19);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(60, 60);
             this.button2.TabIndex = 0;
@@ -427,9 +427,9 @@
             this.confirmPanel.Controls.Add(this.yesBtn);
             this.confirmPanel.Controls.Add(this.confirmMessage);
             this.confirmPanel.Controls.Add(this.label9);
-            this.confirmPanel.Location = new System.Drawing.Point(98, 146);
+            this.confirmPanel.Location = new System.Drawing.Point(29, 118);
             this.confirmPanel.Name = "confirmPanel";
-            this.confirmPanel.Size = new System.Drawing.Size(550, 268);
+            this.confirmPanel.Size = new System.Drawing.Size(539, 268);
             this.confirmPanel.TabIndex = 32;
             // 
             // confirmLabel
@@ -445,7 +445,7 @@
             // noBtn
             // 
             this.noBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noBtn.Location = new System.Drawing.Point(429, 222);
+            this.noBtn.Location = new System.Drawing.Point(418, 226);
             this.noBtn.Name = "noBtn";
             this.noBtn.Size = new System.Drawing.Size(109, 30);
             this.noBtn.TabIndex = 3;
@@ -456,7 +456,7 @@
             // yesBtn
             // 
             this.yesBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.yesBtn.Location = new System.Drawing.Point(308, 222);
+            this.yesBtn.Location = new System.Drawing.Point(294, 226);
             this.yesBtn.Name = "yesBtn";
             this.yesBtn.Size = new System.Drawing.Size(115, 30);
             this.yesBtn.TabIndex = 2;
@@ -490,9 +490,9 @@
             this.errorPanel.Controls.Add(this.okErrorBtn);
             this.errorPanel.Controls.Add(this.label6);
             this.errorPanel.Controls.Add(this.errorTitle);
-            this.errorPanel.Location = new System.Drawing.Point(97, 146);
+            this.errorPanel.Location = new System.Drawing.Point(29, 119);
             this.errorPanel.Name = "errorPanel";
-            this.errorPanel.Size = new System.Drawing.Size(550, 268);
+            this.errorPanel.Size = new System.Drawing.Size(539, 268);
             this.errorPanel.TabIndex = 33;
             // 
             // errorMessage
@@ -508,7 +508,7 @@
             // okErrorBtn
             // 
             this.okErrorBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.okErrorBtn.Location = new System.Drawing.Point(429, 222);
+            this.okErrorBtn.Location = new System.Drawing.Point(415, 222);
             this.okErrorBtn.Name = "okErrorBtn";
             this.okErrorBtn.Size = new System.Drawing.Size(109, 30);
             this.okErrorBtn.TabIndex = 3;
@@ -578,7 +578,7 @@
             this.keyboardPanel.Controls.Add(this.button13);
             this.keyboardPanel.Controls.Add(this.button12);
             this.keyboardPanel.Controls.Add(this.button1);
-            this.keyboardPanel.Location = new System.Drawing.Point(98, 406);
+            this.keyboardPanel.Location = new System.Drawing.Point(29, 389);
             this.keyboardPanel.Name = "keyboardPanel";
             this.keyboardPanel.Size = new System.Drawing.Size(539, 246);
             this.keyboardPanel.TabIndex = 5;
@@ -1025,11 +1025,12 @@
             // 
             // ETransfer
             // 
-            this.ClientSize = new System.Drawing.Size(734, 711);
-            this.Controls.Add(this.errorPanel);
+            this.ClientSize = new System.Drawing.Size(595, 642);
             this.Controls.Add(this.confirmPanel);
+            this.Controls.Add(this.errorPanel);
             this.Controls.Add(this.keyboardPanel);
             this.Controls.Add(this.cancelBtn);
+            this.Controls.Add(this.amountNumberPad);
             this.Controls.Add(this.showAddBtn);
             this.Controls.Add(this.toComboBox);
             this.Controls.Add(this.fromComboBox);
@@ -1038,7 +1039,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Bank_Title);
             this.Controls.Add(this.newContactBox);
-            this.Controls.Add(this.amountNumberPad);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.amountTxtBox);
             this.Name = "ETransfer";
