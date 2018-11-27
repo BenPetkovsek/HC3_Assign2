@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
         {
             Withdraw withdrawWindow = new Withdraw();
             withdrawWindow.selectedAccount = (BankAccount)accountComboBox.SelectedItem;
-            withdrawWindow.ShowDialog();
+            withdrawWindow.Show();
             this.Hide();
         }
 

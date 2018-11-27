@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Deposit));
             this.btnDepositCash = new System.Windows.Forms.Button();
             this.btnDepositCheque = new System.Windows.Forms.Button();
             this.pnlDepositCash = new System.Windows.Forms.Panel();
@@ -43,7 +44,6 @@
             this.btn4 = new System.Windows.Forms.Button();
             this.btn3 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
-            this.btnOK = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
             this.pnlResultBox = new System.Windows.Forms.Panel();
             this.btnDepositAgain = new System.Windows.Forms.Button();
@@ -59,21 +59,23 @@
             this.lblInto = new System.Windows.Forms.Label();
             this.lblDeposit = new System.Windows.Forms.Label();
             this.lblAmount = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblDepositCashOrCheque = new System.Windows.Forms.Label();
             this.pnlDepositCash.SuspendLayout();
             this.grpNumberPad.SuspendLayout();
             this.pnlResultBox.SuspendLayout();
             this.pnlDepositCheque.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDepositCash
             // 
-            this.btnDepositCash.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnDepositCash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(200)))), ((int)(((byte)(135)))));
             this.btnDepositCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDepositCash.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnDepositCash.Location = new System.Drawing.Point(16, 65);
-            this.btnDepositCash.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDepositCash.Location = new System.Drawing.Point(12, 53);
             this.btnDepositCash.Name = "btnDepositCash";
-            this.btnDepositCash.Size = new System.Drawing.Size(340, 496);
+            this.btnDepositCash.Size = new System.Drawing.Size(255, 403);
             this.btnDepositCash.TabIndex = 0;
             this.btnDepositCash.Text = "Deposit Cash";
             this.btnDepositCash.UseVisualStyleBackColor = false;
@@ -83,10 +85,9 @@
             // 
             this.btnDepositCheque.BackColor = System.Drawing.Color.PowderBlue;
             this.btnDepositCheque.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDepositCheque.Location = new System.Drawing.Point(364, 65);
-            this.btnDepositCheque.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDepositCheque.Location = new System.Drawing.Point(273, 53);
             this.btnDepositCheque.Name = "btnDepositCheque";
-            this.btnDepositCheque.Size = new System.Drawing.Size(352, 496);
+            this.btnDepositCheque.Size = new System.Drawing.Size(264, 403);
             this.btnDepositCheque.TabIndex = 0;
             this.btnDepositCheque.Text = "Deposit a Cheque";
             this.btnDepositCheque.UseVisualStyleBackColor = false;
@@ -97,20 +98,18 @@
             this.pnlDepositCash.Controls.Add(this.txtAmount);
             this.pnlDepositCash.Controls.Add(this.grpNumberPad);
             this.pnlDepositCash.Controls.Add(this.pnlResultBox);
-            this.pnlDepositCash.Location = new System.Drawing.Point(16, 148);
-            this.pnlDepositCash.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlDepositCash.Location = new System.Drawing.Point(12, 120);
             this.pnlDepositCash.Name = "pnlDepositCash";
-            this.pnlDepositCash.Size = new System.Drawing.Size(700, 414);
+            this.pnlDepositCash.Size = new System.Drawing.Size(525, 336);
             this.pnlDepositCash.TabIndex = 1;
             // 
             // txtAmount
             // 
             this.txtAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAmount.Location = new System.Drawing.Point(184, 15);
-            this.txtAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAmount.Location = new System.Drawing.Point(138, 12);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.ReadOnly = true;
-            this.txtAmount.Size = new System.Drawing.Size(357, 37);
+            this.txtAmount.Size = new System.Drawing.Size(269, 31);
             this.txtAmount.TabIndex = 11;
             this.txtAmount.TextChanged += new System.EventHandler(this.txtAmount_TextChanged);
             // 
@@ -126,13 +125,10 @@
             this.grpNumberPad.Controls.Add(this.btn4);
             this.grpNumberPad.Controls.Add(this.btn3);
             this.grpNumberPad.Controls.Add(this.btn2);
-            this.grpNumberPad.Controls.Add(this.btnOK);
             this.grpNumberPad.Controls.Add(this.btn1);
-            this.grpNumberPad.Location = new System.Drawing.Point(184, 60);
-            this.grpNumberPad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpNumberPad.Location = new System.Drawing.Point(138, 49);
             this.grpNumberPad.Name = "grpNumberPad";
-            this.grpNumberPad.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.grpNumberPad.Size = new System.Drawing.Size(359, 350);
+            this.grpNumberPad.Size = new System.Drawing.Size(269, 284);
             this.grpNumberPad.TabIndex = 10;
             this.grpNumberPad.TabStop = false;
             // 
@@ -140,10 +136,9 @@
             // 
             this.btnBack.Enabled = false;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(52, 267);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBack.Location = new System.Drawing.Point(39, 217);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(80, 74);
+            this.btnBack.Size = new System.Drawing.Size(60, 60);
             this.btnBack.TabIndex = 17;
             this.btnBack.Text = "<";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -152,10 +147,9 @@
             // btn0
             // 
             this.btn0.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn0.Location = new System.Drawing.Point(140, 267);
-            this.btn0.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn0.Location = new System.Drawing.Point(105, 217);
             this.btn0.Name = "btn0";
-            this.btn0.Size = new System.Drawing.Size(80, 74);
+            this.btn0.Size = new System.Drawing.Size(60, 60);
             this.btn0.TabIndex = 16;
             this.btn0.Text = "0";
             this.btn0.UseVisualStyleBackColor = true;
@@ -164,10 +158,9 @@
             // btn9
             // 
             this.btn9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn9.Location = new System.Drawing.Point(228, 186);
-            this.btn9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn9.Location = new System.Drawing.Point(171, 151);
             this.btn9.Name = "btn9";
-            this.btn9.Size = new System.Drawing.Size(80, 74);
+            this.btn9.Size = new System.Drawing.Size(60, 60);
             this.btn9.TabIndex = 15;
             this.btn9.Text = "9";
             this.btn9.UseVisualStyleBackColor = true;
@@ -176,10 +169,9 @@
             // btn8
             // 
             this.btn8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn8.Location = new System.Drawing.Point(140, 186);
-            this.btn8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn8.Location = new System.Drawing.Point(105, 151);
             this.btn8.Name = "btn8";
-            this.btn8.Size = new System.Drawing.Size(80, 74);
+            this.btn8.Size = new System.Drawing.Size(60, 60);
             this.btn8.TabIndex = 14;
             this.btn8.Text = "8";
             this.btn8.UseVisualStyleBackColor = true;
@@ -188,10 +180,9 @@
             // btn7
             // 
             this.btn7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn7.Location = new System.Drawing.Point(52, 186);
-            this.btn7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn7.Location = new System.Drawing.Point(39, 151);
             this.btn7.Name = "btn7";
-            this.btn7.Size = new System.Drawing.Size(80, 74);
+            this.btn7.Size = new System.Drawing.Size(60, 60);
             this.btn7.TabIndex = 13;
             this.btn7.Text = "7";
             this.btn7.UseVisualStyleBackColor = true;
@@ -200,10 +191,9 @@
             // btn6
             // 
             this.btn6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn6.Location = new System.Drawing.Point(228, 105);
-            this.btn6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn6.Location = new System.Drawing.Point(171, 85);
             this.btn6.Name = "btn6";
-            this.btn6.Size = new System.Drawing.Size(80, 74);
+            this.btn6.Size = new System.Drawing.Size(60, 60);
             this.btn6.TabIndex = 12;
             this.btn6.Text = "6";
             this.btn6.UseVisualStyleBackColor = true;
@@ -212,10 +202,9 @@
             // btn5
             // 
             this.btn5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn5.Location = new System.Drawing.Point(140, 105);
-            this.btn5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn5.Location = new System.Drawing.Point(105, 85);
             this.btn5.Name = "btn5";
-            this.btn5.Size = new System.Drawing.Size(80, 74);
+            this.btn5.Size = new System.Drawing.Size(60, 60);
             this.btn5.TabIndex = 11;
             this.btn5.Text = "5";
             this.btn5.UseVisualStyleBackColor = true;
@@ -224,10 +213,9 @@
             // btn4
             // 
             this.btn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn4.Location = new System.Drawing.Point(52, 105);
-            this.btn4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn4.Location = new System.Drawing.Point(39, 85);
             this.btn4.Name = "btn4";
-            this.btn4.Size = new System.Drawing.Size(80, 74);
+            this.btn4.Size = new System.Drawing.Size(60, 60);
             this.btn4.TabIndex = 10;
             this.btn4.Text = "4";
             this.btn4.UseVisualStyleBackColor = true;
@@ -236,10 +224,9 @@
             // btn3
             // 
             this.btn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn3.Location = new System.Drawing.Point(228, 23);
-            this.btn3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn3.Location = new System.Drawing.Point(171, 19);
             this.btn3.Name = "btn3";
-            this.btn3.Size = new System.Drawing.Size(80, 74);
+            this.btn3.Size = new System.Drawing.Size(60, 60);
             this.btn3.TabIndex = 9;
             this.btn3.Text = "3";
             this.btn3.UseVisualStyleBackColor = true;
@@ -248,34 +235,20 @@
             // btn2
             // 
             this.btn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn2.Location = new System.Drawing.Point(140, 23);
-            this.btn2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn2.Location = new System.Drawing.Point(105, 19);
             this.btn2.Name = "btn2";
-            this.btn2.Size = new System.Drawing.Size(80, 74);
+            this.btn2.Size = new System.Drawing.Size(60, 60);
             this.btn2.TabIndex = 8;
             this.btn2.Text = "2";
             this.btn2.UseVisualStyleBackColor = true;
             this.btn2.Click += new System.EventHandler(this.btn2_Click);
             // 
-            // btnOK
-            // 
-            this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOK.Location = new System.Drawing.Point(228, 268);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(80, 73);
-            this.btnOK.TabIndex = 7;
-            this.btnOK.Text = "OK";
-            this.btnOK.UseVisualStyleBackColor = true;
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
             // btn1
             // 
             this.btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn1.Location = new System.Drawing.Point(52, 23);
-            this.btn1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn1.Location = new System.Drawing.Point(39, 19);
             this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(80, 74);
+            this.btn1.Size = new System.Drawing.Size(60, 60);
             this.btn1.TabIndex = 0;
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = true;
@@ -289,19 +262,19 @@
             this.pnlResultBox.Controls.Add(this.btnBackToMenu);
             this.pnlResultBox.Controls.Add(this.lblResult);
             this.pnlResultBox.Controls.Add(this.lblDepositResult);
-            this.pnlResultBox.Location = new System.Drawing.Point(153, 142);
-            this.pnlResultBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlResultBox.Location = new System.Drawing.Point(115, 115);
+            this.pnlResultBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlResultBox.Name = "pnlResultBox";
-            this.pnlResultBox.Size = new System.Drawing.Size(389, 272);
+            this.pnlResultBox.Size = new System.Drawing.Size(292, 221);
             this.pnlResultBox.TabIndex = 16;
             // 
             // btnDepositAgain
             // 
             this.btnDepositAgain.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.18462F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDepositAgain.Location = new System.Drawing.Point(229, 155);
-            this.btnDepositAgain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDepositAgain.Location = new System.Drawing.Point(172, 126);
+            this.btnDepositAgain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDepositAgain.Name = "btnDepositAgain";
-            this.btnDepositAgain.Size = new System.Drawing.Size(117, 78);
+            this.btnDepositAgain.Size = new System.Drawing.Size(88, 63);
             this.btnDepositAgain.TabIndex = 3;
             this.btnDepositAgain.Text = "Deposit Again";
             this.btnDepositAgain.UseVisualStyleBackColor = true;
@@ -310,10 +283,10 @@
             // btnBackToMenu
             // 
             this.btnBackToMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.18462F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBackToMenu.Location = new System.Drawing.Point(41, 155);
-            this.btnBackToMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBackToMenu.Location = new System.Drawing.Point(31, 126);
+            this.btnBackToMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBackToMenu.Name = "btnBackToMenu";
-            this.btnBackToMenu.Size = new System.Drawing.Size(117, 78);
+            this.btnBackToMenu.Size = new System.Drawing.Size(88, 63);
             this.btnBackToMenu.TabIndex = 2;
             this.btnBackToMenu.Text = "Back to Menu";
             this.btnBackToMenu.UseVisualStyleBackColor = true;
@@ -323,9 +296,10 @@
             // 
             this.lblResult.AutoSize = true;
             this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.18462F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResult.Location = new System.Drawing.Point(104, 95);
+            this.lblResult.Location = new System.Drawing.Point(78, 77);
+            this.lblResult.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(152, 25);
+            this.lblResult.Size = new System.Drawing.Size(119, 20);
             this.lblResult.TabIndex = 1;
             this.lblResult.Text = "Deposit More?";
             this.lblResult.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -334,9 +308,10 @@
             // 
             this.lblDepositResult.AutoSize = true;
             this.lblDepositResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDepositResult.Location = new System.Drawing.Point(40, 41);
+            this.lblDepositResult.Location = new System.Drawing.Point(30, 33);
+            this.lblDepositResult.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDepositResult.Name = "lblDepositResult";
-            this.lblDepositResult.Size = new System.Drawing.Size(274, 36);
+            this.lblDepositResult.Size = new System.Drawing.Size(230, 29);
             this.lblDepositResult.TabIndex = 0;
             this.lblDepositResult.Text = "Deposit Complete!";
             this.lblDepositResult.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -345,18 +320,16 @@
             // 
             this.pnlDepositCheque.Controls.Add(this.btnInsertCheque);
             this.pnlDepositCheque.Controls.Add(this.lblInsertCheque);
-            this.pnlDepositCheque.Location = new System.Drawing.Point(16, 148);
-            this.pnlDepositCheque.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlDepositCheque.Location = new System.Drawing.Point(12, 120);
             this.pnlDepositCheque.Name = "pnlDepositCheque";
-            this.pnlDepositCheque.Size = new System.Drawing.Size(700, 414);
+            this.pnlDepositCheque.Size = new System.Drawing.Size(525, 336);
             this.pnlDepositCheque.TabIndex = 14;
             // 
             // btnInsertCheque
             // 
-            this.btnInsertCheque.Location = new System.Drawing.Point(125, 155);
-            this.btnInsertCheque.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnInsertCheque.Location = new System.Drawing.Point(94, 126);
             this.btnInsertCheque.Name = "btnInsertCheque";
-            this.btnInsertCheque.Size = new System.Drawing.Size(469, 63);
+            this.btnInsertCheque.Size = new System.Drawing.Size(352, 51);
             this.btnInsertCheque.TabIndex = 15;
             this.btnInsertCheque.Text = "Insert Cheque (Debug)";
             this.btnInsertCheque.UseVisualStyleBackColor = true;
@@ -366,46 +339,44 @@
             // 
             this.lblInsertCheque.AutoSize = true;
             this.lblInsertCheque.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInsertCheque.Location = new System.Drawing.Point(119, 106);
-            this.lblInsertCheque.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblInsertCheque.Location = new System.Drawing.Point(89, 86);
             this.lblInsertCheque.Name = "lblInsertCheque";
-            this.lblInsertCheque.Size = new System.Drawing.Size(438, 31);
+            this.lblInsertCheque.Size = new System.Drawing.Size(357, 25);
             this.lblInsertCheque.TabIndex = 14;
             this.lblInsertCheque.Text = "Insert a cheque into the Machine";
             // 
             // btnCancel
             // 
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(39, 634);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Location = new System.Drawing.Point(29, 515);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(271, 54);
+            this.btnCancel.Size = new System.Drawing.Size(203, 44);
             this.btnCancel.TabIndex = 22;
             this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnDeposit
             // 
+            this.btnDeposit.BackColor = System.Drawing.Color.Silver;
             this.btnDeposit.Enabled = false;
             this.btnDeposit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeposit.Location = new System.Drawing.Point(428, 634);
-            this.btnDeposit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDeposit.Location = new System.Drawing.Point(321, 515);
             this.btnDeposit.Name = "btnDeposit";
-            this.btnDeposit.Size = new System.Drawing.Size(267, 53);
+            this.btnDeposit.Size = new System.Drawing.Size(200, 43);
             this.btnDeposit.TabIndex = 21;
             this.btnDeposit.Text = "Deposit";
-            this.btnDeposit.UseVisualStyleBackColor = true;
+            this.btnDeposit.UseVisualStyleBackColor = false;
             this.btnDeposit.Click += new System.EventHandler(this.btnDeposit_Click);
             // 
             // cmbAccounts
             // 
             this.cmbAccounts.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbAccounts.FormattingEnabled = true;
-            this.cmbAccounts.Location = new System.Drawing.Point(364, 574);
-            this.cmbAccounts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbAccounts.Location = new System.Drawing.Point(273, 466);
             this.cmbAccounts.Name = "cmbAccounts";
-            this.cmbAccounts.Size = new System.Drawing.Size(351, 38);
+            this.cmbAccounts.Size = new System.Drawing.Size(264, 33);
             this.cmbAccounts.TabIndex = 19;
             this.cmbAccounts.SelectedIndexChanged += new System.EventHandler(this.cmbAccounts_SelectedIndexChanged);
             // 
@@ -413,10 +384,9 @@
             // 
             this.lblInto.AutoSize = true;
             this.lblInto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInto.Location = new System.Drawing.Point(285, 577);
-            this.lblInto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblInto.Location = new System.Drawing.Point(214, 469);
             this.lblInto.Name = "lblInto";
-            this.lblInto.Size = new System.Drawing.Size(68, 31);
+            this.lblInto.Size = new System.Drawing.Size(53, 25);
             this.lblInto.TabIndex = 24;
             this.lblInto.Text = "Into:";
             // 
@@ -424,10 +394,9 @@
             // 
             this.lblDeposit.AutoSize = true;
             this.lblDeposit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeposit.Location = new System.Drawing.Point(32, 577);
-            this.lblDeposit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDeposit.Location = new System.Drawing.Point(24, 469);
             this.lblDeposit.Name = "lblDeposit";
-            this.lblDeposit.Size = new System.Drawing.Size(107, 31);
+            this.lblDeposit.Size = new System.Drawing.Size(85, 25);
             this.lblDeposit.TabIndex = 20;
             this.lblDeposit.Text = "Deposit";
             // 
@@ -435,17 +404,38 @@
             // 
             this.lblAmount.AutoSize = true;
             this.lblAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAmount.Location = new System.Drawing.Point(135, 577);
-            this.lblAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAmount.Location = new System.Drawing.Point(122, 469);
             this.lblAmount.Name = "lblAmount";
-            this.lblAmount.Size = new System.Drawing.Size(0, 31);
+            this.lblAmount.Size = new System.Drawing.Size(0, 25);
             this.lblAmount.TabIndex = 23;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(48, 45);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblDepositCashOrCheque
+            // 
+            this.lblDepositCashOrCheque.AutoSize = true;
+            this.lblDepositCashOrCheque.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDepositCashOrCheque.Location = new System.Drawing.Point(133, 22);
+            this.lblDepositCashOrCheque.Name = "lblDepositCashOrCheque";
+            this.lblDepositCashOrCheque.Size = new System.Drawing.Size(269, 25);
+            this.lblDepositCashOrCheque.TabIndex = 26;
+            this.lblDepositCashOrCheque.Text = "Deposit Cash or Cheque";
             // 
             // Deposit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(732, 702);
+            this.ClientSize = new System.Drawing.Size(549, 570);
+            this.Controls.Add(this.lblDepositCashOrCheque);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblInto);
             this.Controls.Add(this.lblAmount);
             this.Controls.Add(this.btnCancel);
@@ -456,7 +446,6 @@
             this.Controls.Add(this.pnlDepositCheque);
             this.Controls.Add(this.btnDepositCheque);
             this.Controls.Add(this.btnDepositCash);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Deposit";
             this.Text = "Deposit";
             this.Load += new System.EventHandler(this.Deposit_Load);
@@ -467,6 +456,7 @@
             this.pnlResultBox.PerformLayout();
             this.pnlDepositCheque.ResumeLayout(false);
             this.pnlDepositCheque.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -500,10 +490,11 @@
         private System.Windows.Forms.Button btn4;
         private System.Windows.Forms.Button btn3;
         private System.Windows.Forms.Button btn2;
-        private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btn1;
         private System.Windows.Forms.Label lblInto;
         private System.Windows.Forms.Label lblDeposit;
         private System.Windows.Forms.Label lblAmount;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblDepositCashOrCheque;
     }
 }

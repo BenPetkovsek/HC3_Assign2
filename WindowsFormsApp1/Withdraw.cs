@@ -23,7 +23,16 @@ namespace WindowsFormsApp1
             {
                 _withdrawalAmount = value;
                 lblWithdrawalAmount.Text = "$" + _withdrawalAmount.ToString();
-                if (_withdrawalAmount > 0) btnWithdraw.Enabled = true; else btnWithdraw.Enabled = false;
+                if (_withdrawalAmount > 0)
+                {
+                    btnWithdraw.Enabled = true;
+                    btnWithdraw.BackColor = Color.ForestGreen;
+                }
+                else
+                {
+                    btnWithdraw.Enabled = false;
+                    btnWithdraw.BackColor = Color.Gray;
+                }
             }
         }
 
@@ -36,6 +45,7 @@ namespace WindowsFormsApp1
         {
             LoadAccounts();
             btnWithdraw.Enabled = false;
+            btnWithdraw.BackColor = Color.Gray;
 
         }
         private void RefreshAll()
@@ -85,6 +95,10 @@ namespace WindowsFormsApp1
         private void btnWithdraw100_Click(object sender, EventArgs e)
         {
             WithDraw(100);
+        }
+        private void btnWithdraw200_Click(object sender, EventArgs e)
+        {
+            WithDraw(200);
         }
 
         private void WithDraw(float Amount) 
@@ -177,8 +191,15 @@ namespace WindowsFormsApp1
 
         private void txtAmount_TextChanged(object sender, EventArgs e)
         {
-            btnBack.Enabled = txtAmount.Text.Length > 0; 
-            btnOK.Enabled = txtAmount.Text.Length > 0;
+            if (txtAmount.Text.Length > 0) {
+                btnOK.Enabled = true;
+                btnOK.BackColor = Color.FromArgb(132, 200, 135);
+
+                btnBack.Enabled = true;
+                btnBack.BackColor = Color.FromArgb(225, 225, 138);
+            }
+           
+            
         }
         #endregion
 
@@ -217,6 +238,8 @@ namespace WindowsFormsApp1
                 } else
                 {
                     ShowResultDialog(false);
+                    HideAllCommonAmountButtons();
+                    HideCustomAmountButtons();
                 }
                 
             }
@@ -242,6 +265,7 @@ namespace WindowsFormsApp1
             btnWithdraw60.Show();
             btnWithdraw80.Show();
             btnWithdraw100.Show();
+            btnWithdraw200.Show();
             btnCustomAmount.Show();
         }
 
@@ -253,6 +277,7 @@ namespace WindowsFormsApp1
             btnWithdraw60.Hide();
             btnWithdraw80.Hide();
             btnWithdraw100.Hide();
+            btnWithdraw200.Hide();
             btnCustomAmount.Hide();
         }
 
@@ -278,7 +303,7 @@ namespace WindowsFormsApp1
         private void ShowResultDialog(Boolean success)
         {
             lblWithdrawalResult.Text = (success) ? "Withdrawal Succesful!" : "Withdrawal Unsuccesful";
-            lblResult.Text = (success) ? "Withdrew $" + WithdrawalAmount + " from " + selectedAccount.Name : "Insufficient Funds";
+            lblResult.Text = (success) ? "Withdrew $" + WithdrawalAmount + " from " + selectedAccount.Name + "\n Please collect your cash" : "Insufficient Funds";
             pnlResultBox.Show();
         }
 
@@ -287,6 +312,7 @@ namespace WindowsFormsApp1
             pnlResultBox.Hide();
         }
         #endregion
+
 
     }
 }

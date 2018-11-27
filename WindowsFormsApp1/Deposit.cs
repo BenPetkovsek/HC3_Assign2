@@ -22,7 +22,15 @@ namespace WindowsFormsApp1
             {
                 _depositAmount = value;
                 lblAmount.Text = "$" + _depositAmount.ToString();
-                if (_depositAmount > 0) btnDeposit.Enabled = true; else btnDeposit.Enabled = false;
+                if (_depositAmount > 0)
+                {
+                    btnDeposit.Enabled = true;
+                    btnDeposit.BackColor = Color.FromArgb(132, 200, 135);
+                }
+                else
+                {
+                    btnDeposit.Enabled = false;
+                }
             }
         }
 
@@ -89,7 +97,7 @@ namespace WindowsFormsApp1
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(txtAmount.Text)) SetDepositAmount(float.Parse(txtAmount.Text));
+            if (!String.IsNullOrEmpty(txtAmount.Text)) 
             enteredAmount = "0";
             txtAmount.Text = "";
         }
@@ -119,7 +127,7 @@ namespace WindowsFormsApp1
             btnDepositCash.Size = new Size(255, 61);
             btnDepositCheque.Size = new Size(264, 61);
             btnDepositCheque.BackColor = Color.LightGray;
-            btnDepositCash.BackColor = Color.ForestGreen;
+            btnDepositCash.BackColor = Color.FromArgb(132, 200, 135);
             pnlDepositCheque.Visible = false;
             pnlResultBox.Visible = false;
             pnlDepositCash.Show();
@@ -211,7 +219,7 @@ namespace WindowsFormsApp1
             btnDepositCash.Size = new Size(255, 400);
             btnDepositCheque.Size = new Size(264, 400);
             btnDepositCheque.BackColor = Color.PowderBlue;
-            btnDepositCash.BackColor = Color.ForestGreen;
+            btnDepositCash.BackColor = Color.FromArgb(132, 200, 135);
             txtAmount.Text = "";
             DepositAmount = 0;
 
@@ -224,8 +232,12 @@ namespace WindowsFormsApp1
 
         private void txtAmount_TextChanged(object sender, EventArgs e)
         {
-            btnBack.Enabled = txtAmount.Text.Length > 0;
-            btnOK.Enabled = txtAmount.Text.Length > 0;
+            if (txtAmount.Text.Length > 0)
+            {
+                btnBack.Enabled = true;
+                btnBack.BackColor = Color.FromArgb(225, 225, 138);
+                SetDepositAmount(float.Parse(txtAmount.Text));
+            }
         }
     }
 }
