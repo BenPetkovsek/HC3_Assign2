@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Diagnostics;
+using System.Drawing;
 
 namespace WindowsFormsApp1
 {
     public partial class LoginWindow : Form
     {
+        public string accountNumFill = "____-____-____-____";
+        public string enteredNums = "";
         public LoginWindow()
         {
             InitializeComponent();
@@ -74,13 +78,37 @@ namespace WindowsFormsApp1
 
         private void button12_Click(object sender, EventArgs e)
         {
-            string text = accNumberTxtBox.Text;
-            if (text == "")
+          
+            if (enteredNums == "")
                 return;
-            text = text.Substring(0, text.Length - 1);
-            accNumberTxtBox.Text = text;
+
+            accNumberTxtBox.Text = "";
+            int numchars = 0;
+            enteredNums = enteredNums.Substring(0, enteredNums.Length - 1);
+            foreach (char c in enteredNums)
+            {
+                accNumberTxtBox.Text += c;
+                numchars++;
+                if (numchars % 4 == 0)
+                {
+                    accNumberTxtBox.Text += "-";
+                }
+            }
+            if (accNumberTxtBox.Text.Length < accountNumFill.Length)
+            {
+                accNumberTxtBox.Text += accountNumFill.Substring(accNumberTxtBox.Text.Length);
+            }
+            else
+            {
+                //
+            }
+            
             confirmBtn.Enabled = false;
+            confirmBtn.BackColor = enteredNums.Length == 16 ? Color.FromArgb(132, 200, 135) : Color.Gray;
+
+            button12.BackColor = Color.FromArgb(225, 225, 138);
             button12.Enabled = accNumberTxtBox.Text != "";
+            //formatText();
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -89,27 +117,71 @@ namespace WindowsFormsApp1
         }
 
         private void addText(int num) {
-            if (accNumberTxtBox.Text.Length == 16)
+            
+            if (enteredNums.Length == 16)
                 return;
-            accNumberTxtBox.Text += num.ToString();
-            confirmBtn.Enabled = accNumberTxtBox.Text.Length == 16;
+
+            accNumberTxtBox.Text = "";
+            enteredNums += num.ToString();
+            int numchars = 0;
+            foreach (char c in enteredNums)
+            {
+                accNumberTxtBox.Text += c;
+                numchars++;
+                if (numchars % 4 == 0)
+                {
+                    accNumberTxtBox.Text += "-";
+                }
+            }
+            if (accNumberTxtBox.Text.Length < accountNumFill.Length)
+            {
+                accNumberTxtBox.Text += accountNumFill.Substring(accNumberTxtBox.Text.Length);
+            } else
+            {
+                //
+            }
+            confirmBtn.Enabled = enteredNums.Length == 16;
+            confirmBtn.BackColor = enteredNums.Length == 16 ? Color.FromArgb(132, 200, 135) : Color.Gray;
+            button12.BackColor = Color.FromArgb(225, 225, 138);
             button12.Enabled = accNumberTxtBox.Text != "";
+            formatText();
+        }
+
+       private void formatText()
+        {
+            string text = accNumberTxtBox.Text.Replace("_", "").Replace("-","");
+
+            char[] textArr = "____-____-____-____".ToCharArray();
+            int j = 0;
+            for (int i = 0;i <text.Length;i++)
+            {
+
+                if (textArr[j] != '-')
+                {
+                    textArr[j] = text[i];
+                } else
+                {
+                    i--;
+                }
+                j++;
+
+            }
+            accNumberTxtBox.Text = new string(textArr);
         }
 
         private void accNumberTxtBox_Click_1(object sender, EventArgs e)
         {
         }
 
-        private void accNumberTxtBox_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
 
         private void LoginWindow_Load(object sender, EventArgs e)
         {
             accNumberTxtBox.Text = "";
             button12.Enabled = false;
             confirmBtn.Enabled = false;
+            confirmBtn.BackColor = Color.Gray;
+            button12.BackColor = Color.FromArgb(225, 225, 138);
+            formatText();
         }
     }
 }

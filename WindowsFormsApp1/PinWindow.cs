@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -78,7 +79,9 @@ namespace WindowsFormsApp1
             text = text.Substring(0, text.Length - 1);
             pinTxtBox.Text = text;
             confirmBtn.Enabled = false;
+            confirmBtn.BackColor = Color.Gray;
             button12.Enabled = pinTxtBox.Text != "";
+            button12.BackColor = pinTxtBox.Text != "" ? Color.FromArgb(225, 225, 138) : Color.Gray;
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -92,7 +95,9 @@ namespace WindowsFormsApp1
                 return;
             pinTxtBox.Text += num.ToString();
             confirmBtn.Enabled = pinTxtBox.Text.Length == 4;
+            confirmBtn.BackColor = pinTxtBox.Text.Length == 4 ? Color.FromArgb(132, 200, 135) :  Color.Gray;
             button12.Enabled = pinTxtBox.Text != "";
+            button12.BackColor = pinTxtBox.Text != "" ? Color.FromArgb(225, 225, 138) : Color.Gray;
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)
@@ -105,6 +110,12 @@ namespace WindowsFormsApp1
         private void pinTxtBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void PinWindow_Load(object sender, EventArgs e)
+        {
+
+            confirmBtn.BackColor = Color.Gray;
         }
     }
 }
