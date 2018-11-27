@@ -219,7 +219,7 @@ namespace WindowsFormsApp1
             else
             {
                 transferResultLabel.Text = "Transfer Failed";
-                transferResultText.Text = "Withdraw amount more than balance!";
+                transferResultText.Text = "Withdraw amount more \n than account balance!";
             }
             refresh();
             
