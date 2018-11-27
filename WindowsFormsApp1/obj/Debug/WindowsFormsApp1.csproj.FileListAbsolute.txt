@@ -10,6 +10,7 @@ E:\Entertainment\Projects\HC3_Assign2\WindowsFormsApp1\obj\Debug\WindowsFormsApp
 E:\Entertainment\Projects\HC3_Assign2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.LoginWindow.resources
 E:\Entertainment\Projects\HC3_Assign2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PinWindow.resources
 E:\Entertainment\Projects\HC3_Assign2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Menu.resources
+<<<<<<< HEAD
 E:\Entertainment\Projects\HC3_Assign2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Transfer.resources
 C:\Users\SM\Desktop\4HC3\A2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
 C:\Users\SM\Desktop\4HC3\A2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
@@ -42,3 +43,5 @@ D:\HC3_Assign2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 D:\HC3_Assign2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.AcctInfo.resources
 D:\HC3_Assign2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.CodeAnalysisLog.xml
 D:\HC3_Assign2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.lastcodeanalysissucceeded
+=======
+>>>>>>> 3618b38d928c2c8f22d30484209227c4e99ceb4a

@@ -56,6 +56,13 @@ namespace WindowsFormsApp1
             acctWindow.selectedAccount = (BankAccount)accountComboBox.SelectedItem;
             acctWindow.ShowDialog();
             this.Close();
+		}
+        
+		private void button5_Click(object sender, EventArgs e) {
+            ETransfer transfer = new ETransfer();
+            transfer.Show();
+            this.Hide();
+
         }
     }
 }

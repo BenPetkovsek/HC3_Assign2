@@ -51,6 +51,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,11 +63,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="AcctInfo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AcctInfo.Designer.cs">
       <DependentUpon>AcctInfo.cs</DependentUpon>
+=======
+    <Compile Include="Contacts.cs" />
+    <Compile Include="ETransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ETransfer.Designer.cs">
+      <DependentUpon>ETransfer.cs</DependentUpon>
+>>>>>>> 3618b38d928c2c8f22d30484209227c4e99ceb4a
     </Compile>
     <Compile Include="StankAccount.cs" />
     <Compile Include="Menu.cs">
@@ -101,8 +111,13 @@
     <Compile Include="Withdraw.Designer.cs">
       <DependentUpon>Withdraw.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <EmbeddedResource Include="AcctInfo.resx">
       <DependentUpon>AcctInfo.cs</DependentUpon>
+=======
+	<EmbeddedResource Include="ETransfer.resx">
+      <DependentUpon>ETransfer.cs</DependentUpon>
+>>>>>>> 3618b38d928c2c8f22d30484209227c4e99ceb4a
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
