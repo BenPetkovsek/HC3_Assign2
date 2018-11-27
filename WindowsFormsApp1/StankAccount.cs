@@ -12,6 +12,7 @@ public static class User
     public static string AccountNumber = "999999999999999";
     public static int Pin = 7890;
     public static List<BankAccount> Accounts = new List<BankAccount>();
+    public static List<XactLog> record = new List<XactLog>();
 
     public static void LoadAccounts()
     {
@@ -20,6 +21,19 @@ public static class User
         Accounts.Add(chequing);
         Accounts.Add(savings);
     }
+
+    public static void LoadLog()
+    {
+        XactLog e1 = new XactLog("Chequing", "Deposit", 1099.87f);
+        XactLog e2 = new XactLog("Chequing", "Purchase Tim Hortons", 100.00f);
+        XactLog e3 = new XactLog("Savings", "Deposit", 5760.34f);
+        XactLog e4 = new XactLog("Savings", "Deposit", 240.00f);
+        record.Add(e1);
+        record.Add(e2);
+        record.Add(e3);
+        record.Add(e4);
+    }
+
 }
 
 public class BankAccount
@@ -36,4 +50,23 @@ public class BankAccount
     {
         return Name + ": $" + Balance;
     }
+}
+
+public class XactLog
+{
+    public XactLog(string name, string type, float amount)
+    {
+        Name = name;
+        Type = type;
+        amt = amount;
+    }
+
+    public string Name { get; }
+    public float amt { get; set; }
+    public string Type { get; set; }
+    public override string ToString()
+    {
+        return "Account: " + Name + ", " + Type + "              $ " + amt;
+    }
+
 }

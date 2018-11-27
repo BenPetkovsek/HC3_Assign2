@@ -13,6 +13,7 @@ namespace WindowsFormsApp1
     public partial class Withdraw : Form
     {
         public BankAccount selectedAccount;
+        
         float _withdrawalAmount;
         public float WithdrawalAmount
         {
@@ -194,6 +195,8 @@ namespace WindowsFormsApp1
                 if (WithdrawalAmount <= selectedAccount.Balance)
                 {
                     selectedAccount.Balance -= WithdrawalAmount;
+                    XactLog x = new XactLog(selectedAccount.Name, "Withdrawal", WithdrawalAmount);
+                    User.record.Add(x);
                     ShowResultDialog(true);
                     HideAllCommonAmountButtons();
                     HideCustomAmountButtons();

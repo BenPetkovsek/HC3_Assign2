@@ -89,7 +89,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.06154F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(114, 201);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(256, 36);
+            this.label1.Size = new System.Drawing.Size(233, 31);
             this.label1.TabIndex = 6;
             this.label1.Text = "Account Balance: ";
             // 
@@ -102,6 +102,7 @@
             this.button3.TabIndex = 7;
             this.button3.Text = " Info → ";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // Bank_Title
             // 
@@ -110,7 +111,7 @@
             this.Bank_Title.Location = new System.Drawing.Point(81, 24);
             this.Bank_Title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Bank_Title.Name = "Bank_Title";
-            this.Bank_Title.Size = new System.Drawing.Size(584, 98);
+            this.Bank_Title.Size = new System.Drawing.Size(533, 91);
             this.Bank_Title.TabIndex = 8;
             this.Bank_Title.Text = "Jurassic Bank";
             // 

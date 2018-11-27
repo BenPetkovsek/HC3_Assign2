@@ -25,7 +25,6 @@ namespace WindowsFormsApp1
             this.Hide();
         }
 
-
         private void Menu_Load(object sender, EventArgs e)
         {
             
@@ -48,6 +47,15 @@ namespace WindowsFormsApp1
         private void accountComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            AcctInfo acctWindow = new AcctInfo();
+            User.LoadLog();
+            acctWindow.selectedAccount = (BankAccount)accountComboBox.SelectedItem;
+            acctWindow.ShowDialog();
+            this.Close();
         }
     }
 }
